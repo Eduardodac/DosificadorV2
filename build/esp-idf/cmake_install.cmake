@@ -537,3 +537,23 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/main/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/cmake_install.cmake")
+endif()
+

@@ -80,3 +80,7 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/perfmon/libperfmon.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/spiffs/libspiffs.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/main/libmain.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/libhx711_comp.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/libmotorDC.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/libservo.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/libultra.a

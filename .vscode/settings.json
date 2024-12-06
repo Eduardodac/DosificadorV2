@@ -13,5 +13,8 @@
     ],
     "idf.portWin": "COM3",
     "idf.pythonBinPathWin": "c:\\Espressif\\frameworks\\esp-idf-v5.3\\tools\\python_env\\idf5.3_py3.11_env\\Scripts\\python.exe",
-    "idf.toolsPathWin": "c:\\Espressif\\frameworks\\esp-idf-v5.3\\tools"
+    "idf.toolsPathWin": "c:\\Espressif\\frameworks\\esp-idf-v5.3\\tools",
+    "files.associations": {
+        "freertos.h": "c"
+    }
 }
