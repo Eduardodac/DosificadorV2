@@ -1,3 +1,3 @@
-idf_component_register(SRCS "main.c"
+idf_component_register(SRCS "hx711_comp.c"
                     INCLUDE_DIRS "."
                     )
