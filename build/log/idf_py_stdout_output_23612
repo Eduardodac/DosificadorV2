@@ -1,0 +1,236 @@
++ښ�j%�(35) boot: ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 10 2025 12:37:12[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b2b4h ( 45748) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b2dc vaddr=3ffb0000 size=02374h (  9076) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d658 vaddr=40080000 size=029c0h ( 10688) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17520h ( 95520) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037548 vaddr=400829c0 size=0a94ch ( 43340) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     DosificadorV2[0m
+[0;32mI (220) app_init: App version:      32fd8b8-dirty[0m
+[0;32mI (225) app_init: Compile time:     Jan 13 2025 13:25:58[0m
+[0;32mI (231) app_init: ELF file SHA256:  e38200240...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (241) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (251) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D30C len 00012CF4 (75 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (326) main_task: Calling app_main()[0m
+[0;32mI (326) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (326) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+ESP_ERROR_CHECK failed: esp_err_t 0x107 (ESP_ERR_TIMEOUT) at 0x400d6444
+file: "./components/hx711_comp/hx711_comp.c" line 18
+func: tarar_bascula
+expression: hx711_init(&hx711)
+
+abort() was called at PC 0x400856c3 on core 0
+
+
+Backtrace: 0x40081886:0x3ffb3f50 0x400856cd:0x3ffb3f70 0x4008bbe5:0x3ffb3f90 0x400856c3:0x3ffb4000 0x400d6444:0x3ffb4030 0x400d6367:0x3ffb4070 0x400e6cd8:0x3ffb4090 0x4008615d:0x3ffb40c0
+
+
+
+
+ELF file SHA256: e38200240
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 10 2025 12:37:12[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b2b4h ( 45748) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b2dc vaddr=3ffb0000 size=02374h (  9076) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d658 vaddr=40080000 size=029c0h ( 10688) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17520h ( 95520) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037548 vaddr=400829c0 size=0a94ch ( 43340) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     DosificadorV2[0m
+[0;32mI (220) app_init: App version:      32fd8b8-dirty[0m
+[0;32mI (225) app_init: Compile time:     Jan 13 2025 13:25:58[0m
+[0;32mI (231) app_init: ELF file SHA256:  e38200240...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (241) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (251) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008D30C len 00012CF4 (75 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (326) main_task: Calling app_main()[0m
+[0;32mI (326) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (326) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (346) hx711-example: Tarando...[0m
+[0;32mI (45706) hx711-example: Tareo listo... -252276[0m
+[0;33mW (45806) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (45806) SERVO: Connect timer and operator[0m
+[0;32mI (45806) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (45806) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (45816) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (45826) SERVO: Enable and start timer[0m
+[0;32mI (45826) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (45836) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (45846) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (45856) motorDC: Motor DC initialized[0m
+[0;32mI (58316) hx711-example: Info: 4243[0m
+[0;32mI (58316) hx711-example: Medida: 19.709875 grms.[0m
+Medicion de bascula 19.709875
+[0;32mI (70926) hx711-example: Info: 9117[0m
+[0;32mI (70926) hx711-example: Medida: 42.350914 grms.[0m
+Medicion de bascula 42.350914
+time 3 hits 75512
+[0;32mI (83536) hx711-example: Info: 12508[0m
+[0;32mI (83536) hx711-example: Medida: 58.103020 grms.[0m
+Medicion de bascula 58.103020
+[0;32mI (96146) hx711-example: Info: 14111[0m
+[0;32mI (96146) hx711-example: Medida: 65.549385 grms.[0m
+Medicion de bascula 65.549385
+ime 3 hits 105512
+[0;32mI (108756) hx711-example: Info: 18022[0m
+[0;32mI (108756) hx711-example: Medida: 83.717033 grms.[0m
+Medicion de bascula 83.717033
+[0;32mI (121366) hx711-example: Info: 21712[0m
+[0;32mI (121366) hx711-example: Medida: 100.858070 grms.[0m
+Medicion de bascula 100.858070
+[0;32mI (133976) hx711-example: Info: 22911[0m
+[0;32mI (133976) hx711-example: Medida: 106.427750 grms.[0m
+Medicion de bascula 106.427750
+time 3 hits 135512
+[0;32mI (146596) hx711-example: Info: 23429[0m
+[0;32mI (146596) hx711-example: Medida: 108.834000 grms.[0m
+Medicion de bascula 108.834000
+[0;32mI (159206) hx711-example: Info: 23544[0m
+[0;32mI (159206) hx711-example: Medida: 109.368210 grms.[0m
+Medicion de bascula 109.368210
+time 3 hits 165512
+[0;32mI (171816) hx711-example: Info: 23541[0m
+[0;32mI (171816) hx711-example: Medida: 109.354271 grms.[0m
+Medicion de bascula 109.354271
+[0;32mI (184426) hx711-example: Info: 23591[0m
+[0;32mI (184426) hx711-example: Medida: 109.586533 grms.[0m
+Medicion de bascula 109.586533
+time 3 hits 195512
+[0;32mI (197016) hx711-example: Info: 23661[0m
+[0;32mI (197016) hx711-example: Medida: 109.911705 grms.[0m
+Medicion de bascula 109.911705
+[0;32mI (209606) hx711-example: Info: 23730[0m
+[0;32mI (209606) hx711-example: Medida: 110.232224 grms.[0m
+Medicion de bascula 110.232224
+[0;32mI (222196) hx711-example: Info: 23599[0m
+[0;32mI (222196) hx711-example: Medida: 109.623695 grms.[0m
+Medicion de bascula 109.623695
+time 3 hits 225512
+[0;32mI (234786) hx711-example: Info: 23680[0m
+[0;32mI (234786) hx711-example: Medida: 109.999962 grms.[0m
+Medicion de bascula 109.999962
+[0;32mI (247376) hx711-example: Info: -23167[0m
+[0;32mI (247376) hx711-example: Medida: -107.616943 grms.[0m
+Medicion de bascula -107.616943
+time 3 hits 255512
+[0;32mI (259966) hx711-example: Info: -23180[0m
+[0;32mI (259966) hx711-example: Medida: -107.677330 grms.[0m
+Medicion de bascula -107.677330
+[0;32mI (272556) hx711-example: Info: -23176[0m
+[0;32mI (272556) hx711-example: Medida: -107.658745 grms.[0m
+Medicion de bascula -107.658745
+[0;32mI (285146) hx711-example: Info: -17819[0m
+[0;32mI (285146) hx711-example: Medida: -82.774040 grms.[0m
+Medicion de bascula -82.774040
+time 3 hits 285512
+[0;32mI (297736) hx711-example: Info: -22393[0m
+[0;32mI (297736) hx711-example: Medida: -104.021500 grms.[0m
+Medicion de bascula -104.021500
+[0;32mI (310326) hx711-example: Info: -23147[0m
+[0;32mI (310326) hx711-example: Medida: -107.524033 grms.[0m
+Medicion de bascula -107.524033
+time 3 hits 315512
+[0;32mI (322916) hx711-example: Info: -23165[0m
+[0;32mI (322916) hx711-example: Medida: -107.607651 grms.[0m
+Medicion de bascula -107.607651
+[0;32mI (335506) hx711-example: Info: -23178[0m
+[0;32mI (335506) hx711-example: Medida: -107.668037 grms.[0m
+Medicion de bascula -107.668037
+time 3 hits 345512
+[0;32mI (348096) hx711-example: Info: -23162[0m
+[0;32mI (348096) hx711-example: Medida: -107.593712 grms.[0m
+Medicion de bascula -107.593712
+[0;32mI (360696) hx711-example: Info: -23160[0m
+[0;32mI (360696) hx711-example: Medida: -107.584427 grms.[0m
+Medicion de bascula -107.584427
+[0;32mI (373286) hx711-example: Info: -23182[0m
+[0;32mI (373286) hx711-example: Medida: -107.686623 grms.[0m
+Medicion de bascula -107.686623
+time 3 hits 375512
+[0;32mI (385876) hx711-example: Info: -23170[0m
+[0;32mI (385876) hx711-example: Medida: -107.630875 grms.[0m
+Medicion de bascula -107.630875

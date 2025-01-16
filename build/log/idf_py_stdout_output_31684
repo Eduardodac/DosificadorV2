@@ -1,0 +1,168 @@
+[1/157] Building C object esp-idf/framebuffer/CMakeFiles/__idf_framebuffer.dir/framebuffer.c.obj
+[2/157] Building C object esp-idf/framebuffer/CMakeFiles/__idf_framebuffer.dir/fbanimation.c.obj
+[3/157] Building C object esp-idf/hd44780/CMakeFiles/__idf_hd44780.dir/hd44780.c.obj
+[4/157] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\TrabajoTerminalII\DosificadorV2\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/TrabajoTerminalII/DosificadorV2/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[5/155] Linking C static library esp-idf\example\libexample.a
+[6/155] Building C object esp-idf/hdc1000/CMakeFiles/__idf_hdc1000.dir/hdc1000.c.obj
+[7/155] Linking C static library esp-idf\ds18x20\libds18x20.a
+[8/155] Linking C static library esp-idf\framebuffer\libframebuffer.a
+[9/155] Building C object esp-idf/hmc5883l/CMakeFiles/__idf_hmc5883l.dir/hmc5883l.c.obj
+[10/155] Building C object esp-idf/ht16k33/CMakeFiles/__idf_ht16k33.dir/ht16k33.c.obj
+[11/155] Building C object esp-idf/hts221/CMakeFiles/__idf_hts221.dir/hts221.c.obj
+[12/155] Linking C static library esp-idf\hd44780\libhd44780.a
+[13/155] Building C object esp-idf/hx711/CMakeFiles/__idf_hx711.dir/hx711.c.obj
+[14/155] Linking C static library esp-idf\hdc1000\libhdc1000.a
+[15/155] Building C object esp-idf/icm42670/CMakeFiles/__idf_icm42670.dir/icm42670.c.obj
+[16/155] Linking C static library esp-idf\hmc5883l\libhmc5883l.a
+[17/155] Linking C static library esp-idf\ht16k33\libht16k33.a
+[18/155] Linking C static library esp-idf\hts221\libhts221.a
+[19/155] Building C object esp-idf/impulse_sensor/CMakeFiles/__idf_impulse_sensor.dir/impulse_sensor.c.obj
+[20/155] Building C object esp-idf/ina219/CMakeFiles/__idf_ina219.dir/ina219.c.obj
+[21/155] Building C object esp-idf/ina260/CMakeFiles/__idf_ina260.dir/ina260.c.obj
+[22/155] Linking C static library esp-idf\icm42670\libicm42670.a
+[23/155] Linking C static library esp-idf\impulse_sensor\libimpulse_sensor.a
+[24/155] Linking C static library esp-idf\ina219\libina219.a
+[25/155] Building C object esp-idf/ina3221/CMakeFiles/__idf_ina3221.dir/ina3221.c.obj
+[26/155] Building C object esp-idf/l3gx/CMakeFiles/__idf_l3gx.dir/l3gx.c.obj
+[27/155] Linking C static library esp-idf\ina260\libina260.a
+[28/155] Building C object esp-idf/lc709203f/CMakeFiles/__idf_lc709203f.dir/lc709203f.c.obj
+[29/155] Building C object esp-idf/led_strip/CMakeFiles/__idf_led_strip.dir/led_strip.c.obj
+In file included from /TrabajoTerminalII/esp-idf-lib/components/led_strip/led_strip.h:40,
+                 from /TrabajoTerminalII/esp-idf-lib/components/led_strip/led_strip.c:33:
+C:/Espressif/frameworks/esp-idf-v5.3/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[30/155] Linking C static library esp-idf\l3gx\libl3gx.a
+[31/155] Linking C static library esp-idf\ina3221\libina3221.a
+[32/155] Linking C static library esp-idf\hx711\libhx711.a
+[33/155] Building C object esp-idf/led_strip_spi/CMakeFiles/__idf_led_strip_spi.dir/led_strip_spi.c.obj
+[34/155] Linking C static library esp-idf\lc709203f\liblc709203f.a
+[35/155] Linking C static library esp-idf\led_strip\libled_strip.a
+[36/155] Building C object esp-idf/led_strip_spi/CMakeFiles/__idf_led_strip_spi.dir/led_strip_spi_sk9822.c.obj
+[37/155] Building C object esp-idf/ls7366r/CMakeFiles/__idf_ls7366r.dir/ls7366r.c.obj
+[38/155] Building C object esp-idf/lm75/CMakeFiles/__idf_lm75.dir/lm75.c.obj
+[39/155] Building C object esp-idf/lsm303/CMakeFiles/__idf_lsm303.dir/lsm303.c.obj
+[40/155] Building C object esp-idf/max1704x/CMakeFiles/__idf_max1704x.dir/max1704x.c.obj
+[41/155] Linking C static library esp-idf\led_strip_spi\libled_strip_spi.a
+[42/155] Linking C static library esp-idf\lsm303\liblsm303.a
+[43/155] Linking C static library esp-idf\max1704x\libmax1704x.a
+[44/155] Linking C static library esp-idf\ls7366r\libls7366r.a
+[45/155] Linking C static library esp-idf\lm75\liblm75.a
+[46/155] Building C object esp-idf/max31855/CMakeFiles/__idf_max31855.dir/max31855.c.obj
+[47/155] Building C object esp-idf/max31865/CMakeFiles/__idf_max31865.dir/max31865.c.obj
+[48/155] Building C object esp-idf/max31725/CMakeFiles/__idf_max31725.dir/max31725.c.obj
+[49/155] Building C object esp-idf/max7219/CMakeFiles/__idf_max7219.dir/max7219.c.obj
+[50/155] Building C object esp-idf/mcp23008/CMakeFiles/__idf_mcp23008.dir/mcp23008.c.obj
+[51/155] Linking C static library esp-idf\max31855\libmax31855.a
+[52/155] Linking C static library esp-idf\max31725\libmax31725.a
+[53/155] Linking C static library esp-idf\max31865\libmax31865.a
+[54/155] Building C object esp-idf/mcp23x17/CMakeFiles/__idf_mcp23x17.dir/mcp23x17.c.obj
+[55/155] Linking C static library esp-idf\mcp23008\libmcp23008.a
+[56/155] Linking C static library esp-idf\max7219\libmax7219.a
+[57/155] Building C object esp-idf/mcp342x/CMakeFiles/__idf_mcp342x.dir/mcp342x.c.obj
+[58/155] Building C object esp-idf/mcp4725/CMakeFiles/__idf_mcp4725.dir/mcp4725.c.obj
+[59/155] Building C object esp-idf/mcp960x/CMakeFiles/__idf_mcp960x.dir/mcp960x.c.obj
+[60/155] Building C object esp-idf/mcp9808/CMakeFiles/__idf_mcp9808.dir/mcp9808.c.obj
+[61/155] Linking C static library esp-idf\mcp23x17\libmcp23x17.a
+[62/155] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[63/155] Linking C static library esp-idf\mcp4725\libmcp4725.a
+[64/155] Building C object esp-idf/mhz19b/CMakeFiles/__idf_mhz19b.dir/mhz19b.c.obj
+[65/155] Linking C static library esp-idf\mcp342x\libmcp342x.a
+[66/155] Building C object esp-idf/mp2660/CMakeFiles/__idf_mp2660.dir/mp2660.c.obj
+[67/155] Building C object esp-idf/mpu6050/CMakeFiles/__idf_mpu6050.dir/mpu6050.c.obj
+[68/155] Building C object esp-idf/ms5611/CMakeFiles/__idf_ms5611.dir/ms5611.c.obj
+[69/155] Linking C static library esp-idf\mcp960x\libmcp960x.a
+[70/155] Building C object esp-idf/noise/CMakeFiles/__idf_noise.dir/noise.c.obj
+[71/155] Linking C static library esp-idf\mcp9808\libmcp9808.a
+[72/155] Linking C static library esp-idf\mp2660\libmp2660.a
+[73/155] Linking C static library esp-idf\mpu6050\libmpu6050.a
+[74/155] Linking C static library esp-idf\ms5611\libms5611.a
+[75/155] Building C object esp-idf/pca9557/CMakeFiles/__idf_pca9557.dir/pca9557.c.obj
+[76/155] Linking C static library esp-idf\mhz19b\libmhz19b.a
+[77/155] Building C object esp-idf/pca9685/CMakeFiles/__idf_pca9685.dir/pca9685.c.obj
+[78/155] Building C object esp-idf/pcf8563/CMakeFiles/__idf_pcf8563.dir/pcf8563.c.obj
+[79/155] Building C object esp-idf/pcf8574/CMakeFiles/__idf_pcf8574.dir/pcf8574.c.obj
+[80/155] Linking C static library esp-idf\noise\libnoise.a
+[81/155] Building C object esp-idf/pcf8575/CMakeFiles/__idf_pcf8575.dir/pcf8575.c.obj
+[82/155] Building C object esp-idf/pcf8591/CMakeFiles/__idf_pcf8591.dir/pcf8591.c.obj
+[83/155] Linking C static library esp-idf\pca9557\libpca9557.a
+[84/155] Building C object esp-idf/qmc5883l/CMakeFiles/__idf_qmc5883l.dir/qmc5883l.c.obj
+[85/155] Linking C static library esp-idf\pca9685\libpca9685.a
+[86/155] Linking C static library esp-idf\pcf8575\libpcf8575.a
+[87/155] Linking C static library esp-idf\pcf8563\libpcf8563.a
+[88/155] Building C object esp-idf/qmp6988/CMakeFiles/__idf_qmp6988.dir/qmp6988.c.obj
+[89/155] Linking C static library esp-idf\pcf8591\libpcf8591.a
+[90/155] Linking C static library esp-idf\pcf8574\libpcf8574.a
+[91/155] Building C object esp-idf/rda5807m/CMakeFiles/__idf_rda5807m.dir/rda5807m.c.obj
+[92/155] Building C object esp-idf/scd30/CMakeFiles/__idf_scd30.dir/scd30.c.obj
+[93/155] Building C object esp-idf/scd4x/CMakeFiles/__idf_scd4x.dir/scd4x.c.obj
+[94/155] Building C object esp-idf/sfa3x/CMakeFiles/__idf_sfa3x.dir/sfa3x.c.obj
+[95/155] Linking C static library esp-idf\qmc5883l\libqmc5883l.a
+[96/155] Linking C static library esp-idf\qmp6988\libqmp6988.a
+[97/155] Building C object esp-idf/sgm58031/CMakeFiles/__idf_sgm58031.dir/sgm58031.c.obj
+[98/155] Linking C static library esp-idf\scd30\libscd30.a
+[99/155] Linking C static library esp-idf\rda5807m\librda5807m.a
+[100/155] Building C object esp-idf/sgp40/CMakeFiles/__idf_sgp40.dir/sensirion_voc_algorithm.c.obj
+[101/155] Building C object esp-idf/sgp40/CMakeFiles/__idf_sgp40.dir/sgp40.c.obj
+[102/155] Building C object esp-idf/sht3x/CMakeFiles/__idf_sht3x.dir/sht3x.c.obj
+[103/155] Building C object esp-idf/sht4x/CMakeFiles/__idf_sht4x.dir/sht4x.c.obj
+[104/155] Linking C static library esp-idf\sfa3x\libsfa3x.a
+[105/155] Building C object esp-idf/si7021/CMakeFiles/__idf_si7021.dir/si7021.c.obj
+[106/155] Linking C static library esp-idf\sgm58031\libsgm58031.a
+[107/155] Building C object esp-idf/sts21/CMakeFiles/__idf_sts21.dir/sts21.c.obj
+[108/155] Linking C static library esp-idf\sht3x\libsht3x.a
+[109/155] Linking C static library esp-idf\sht4x\libsht4x.a
+[110/155] Linking C static library esp-idf\scd4x\libscd4x.a
+[111/155] Building C object esp-idf/sts3x/CMakeFiles/__idf_sts3x.dir/sts3x.c.obj
+[112/155] Building C object esp-idf/tca9548/CMakeFiles/__idf_tca9548.dir/tca9548.c.obj
+[113/155] Building C object esp-idf/tca6424a/CMakeFiles/__idf_tca6424a.dir/tca6424a.c.obj
+[114/155] Linking C static library esp-idf\si7021\libsi7021.a
+[115/155] Building C object esp-idf/tca95x5/CMakeFiles/__idf_tca95x5.dir/tca95x5.c.obj
+[116/155] Linking C static library esp-idf\sgp40\libsgp40.a
+[117/155] Linking C static library esp-idf\sts3x\libsts3x.a
+[118/155] Linking C static library esp-idf\tca6424a\libtca6424a.a
+[119/155] Building C object esp-idf/tps63101x/CMakeFiles/__idf_tps63101x.dir/tps63101x.c.obj
+[120/155] Building C object esp-idf/tda74xx/CMakeFiles/__idf_tda74xx.dir/tda74xx.c.obj
+[121/155] Building C object esp-idf/tsl2561/CMakeFiles/__idf_tsl2561.dir/tsl2561.c.obj
+[122/155] Linking C static library esp-idf\sts21\libsts21.a
+[123/155] Linking C static library esp-idf\tca95x5\libtca95x5.a
+[124/155] Building C object esp-idf/tsl2591/CMakeFiles/__idf_tsl2591.dir/tsl2591.c.obj
+[125/155] Building C object esp-idf/tsl4531/CMakeFiles/__idf_tsl4531.dir/tsl4531.c.obj
+[126/155] Linking C static library esp-idf\tps63101x\libtps63101x.a
+[127/155] Linking C static library esp-idf\tca9548\libtca9548.a
+[128/155] Building C object esp-idf/tsys01/CMakeFiles/__idf_tsys01.dir/tsys01.c.obj
+[129/155] Building C object esp-idf/ultrasonic/CMakeFiles/__idf_ultrasonic.dir/ultrasonic.c.obj
+[130/155] Linking C static library esp-idf\tsl2561\libtsl2561.a
+[131/155] Building C object esp-idf/veml7700/CMakeFiles/__idf_veml7700.dir/veml7700.c.obj
+[132/155] Linking C static library esp-idf\tsl2591\libtsl2591.a
+[133/155] Linking C static library esp-idf\tda74xx\libtda74xx.a
+[134/155] Linking C static library esp-idf\tsl4531\libtsl4531.a
+[135/155] Building C object esp-idf/hx711_comp/CMakeFiles/__idf_hx711_comp.dir/hx711_comp.c.obj
+[136/155] Building C object esp-idf/wiegand/CMakeFiles/__idf_wiegand.dir/wiegand.c.obj
+[137/155] Building C object esp-idf/motorDC/CMakeFiles/__idf_motorDC.dir/motorDC.c.obj
+[138/155] Linking C static library esp-idf\ultrasonic\libultrasonic.a
+[139/155] Linking C static library esp-idf\tsys01\libtsys01.a
+[140/155] Linking C static library esp-idf\hx711_comp\libhx711_comp.a
+[141/155] Linking C static library esp-idf\veml7700\libveml7700.a
+[142/155] Linking C static library esp-idf\wiegand\libwiegand.a
+[143/155] Linking C static library esp-idf\motorDC\libmotorDC.a
+[144/155] Building C object esp-idf/servo/CMakeFiles/__idf_servo.dir/servo.c.obj
+[145/155] Building C object esp-idf/variables_globales/CMakeFiles/__idf_variables_globales.dir/variables_globales.c.obj
+[146/155] Building C object esp-idf/ultra/CMakeFiles/__idf_ultra.dir/ultra.c.obj
+[147/155] Linking C static library esp-idf\servo\libservo.a
+[148/155] Linking C static library esp-idf\variables_globales\libvariables_globales.a
+[149/155] Linking C static library esp-idf\ultra\libultra.a
+[150/155] Linking C static library esp-idf\main\libmain.a
+[151/155] Generating ld/sections.ld
+[152/155] Building C object CMakeFiles/DosificadorV2.elf.dir/project_elf_src_esp32.c.obj
+[153/155] Linking CXX executable DosificadorV2.elf
+[154/155] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/TrabajoTerminalII/DosificadorV2/build/DosificadorV2.bin
+[155/155] cmd.exe /C "cd /D C:\TrabajoTerminalII\DosificadorV2\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/TrabajoTerminalII/DosificadorV2/build/partition_table/partition-table.bin C:/TrabajoTerminalII/DosificadorV2/build/DosificadorV2.bin"
+DosificadorV2.bin binary size 0x317a0 bytes. Smallest app partition is 0x100000 bytes. 0xce860 bytes (81%) free.

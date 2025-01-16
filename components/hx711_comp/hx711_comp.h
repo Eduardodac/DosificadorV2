@@ -1,9 +1,8 @@
-#ifndef ULTRASONIC_H
-#define ULTRASONIC_H
+#ifndef HX711_COMP_H
+#define HX711_COMP_H
 
-#include <hx711.h>
-#include <esp_err.h>
-
-void test(void *pvParameters);
+// void test(void *pvParameters);
+void tarar_bascula();
+float medir_bascula();
 
 #endif // ULTRASONIC_H

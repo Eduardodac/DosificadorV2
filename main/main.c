@@ -8,12 +8,17 @@
 #include "variables_globales.h"
 #include "motorDC.h"
 #include "esp_timer.h"
+#include "hx711_comp.h"
 
-    int status = 1;
+static float limite_bascula=300;
+int status = 0;
+
+float medicion_bascula = 0;
 
 void on_timer(TimerHandle_t xTimer)
 {
     printf("time hits %lld\n", esp_timer_get_time() / 1000);
+    medir_bascula();
 }
 
 void on_timer2(TimerHandle_t xTimer)
@@ -33,10 +38,13 @@ void on_timer3(TimerHandle_t xTimer)
 
 void app_main(void)
 {
+    tarar_bascula();
     iniciar_ultrasonico();
     create_mutex_estadoActivacion();
     create_mutex_ultraMeasure();
 
+    // TimerHandle_t xTimer = xTimerCreate("my first timer", pdMS_TO_TICKS(60000), true, NULL, on_timer);
+    // xTimerStart(xTimer, 0);
     TimerHandle_t xTimer3 = xTimerCreate("my third timer", pdMS_TO_TICKS(30000), true, NULL, on_timer3);
     xTimerStart(xTimer3, 0);
 
@@ -45,27 +53,26 @@ void app_main(void)
     servo_init();
     motor_dc_init();
 
-    while (1)
+    while (medicion_bascula <= limite_bascula)
     {
-        if (status == 1)
+        servo_update_angle(-55);
+        motor_dc_forward();
+        motor_dc_set_speed(450);
+        vTaskDelay(pdMS_TO_TICKS(300));
+        servo_update_angle(20);
+        if (xSemaphoreTake(xMutexEstadoActivacion, portMAX_DELAY) == pdTRUE)
         {
-            servo_update_angle(-55);
-            motor_dc_forward();
-            motor_dc_set_speed(400);
-            vTaskDelay(pdMS_TO_TICKS(500));
-            servo_update_angle(20);
-            if (xSemaphoreTake(xMutexEstadoActivacion, portMAX_DELAY) == pdTRUE)
-            {
-                status = 0;
-                xSemaphoreGive(xMutexEstadoActivacion);
-            }
-
-            vTaskDelay(pdMS_TO_TICKS(5000));
-            motor_dc_reverse();
-            motor_dc_set_speed(350);
-            vTaskDelay(pdMS_TO_TICKS(500));
-            motor_dc_set_speed(0);
+            status = 0;
+            xSemaphoreGive(xMutexEstadoActivacion);
         }
+
+        vTaskDelay(pdMS_TO_TICKS(10000));
+        motor_dc_reverse();
+        motor_dc_set_speed(350);
         vTaskDelay(pdMS_TO_TICKS(500));
+        motor_dc_set_speed(0);
+        medicion_bascula = medir_bascula();
+        printf("Medicion de bascula %f\n", medicion_bascula);
     }
+    vTaskDelay(pdMS_TO_TICKS(500));
 }

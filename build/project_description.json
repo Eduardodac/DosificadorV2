@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "DosificadorV2",
-    "project_version":    "d554ba3-dirty",
+    "project_version":    "32fd8b8-dirty",
     "project_path":       "C:/TrabajoTerminalII/DosificadorV2",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.3",
     "build_dir":          "C:/TrabajoTerminalII/DosificadorV2/build",
