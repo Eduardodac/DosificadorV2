@@ -5,6 +5,7 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   file(REMOVE_RECURSE
   "DosificadorV2.bin"
   "DosificadorV2.map"
+  "azure.crt.S"
   "bootloader\\bootloader.bin"
   "bootloader\\bootloader.elf"
   "bootloader\\bootloader.map"

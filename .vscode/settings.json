@@ -16,6 +16,7 @@
     "idf.toolsPathWin": "c:\\Espressif\\frameworks\\esp-idf-v5.3\\tools",
     "files.associations": {
         "freertos.h": "c",
-        "esp_log.h": "c"
+        "esp_log.h": "c",
+        "stdio.h": "c"
     }
 }

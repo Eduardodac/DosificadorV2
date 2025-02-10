@@ -1468,6 +1468,13 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/CMakeFiles/list_install
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/CMakeFiles/install.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/CMakeFiles/install/local.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/CMakeFiles/install/strip.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/__idf_servidor.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/edit_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/rebuild_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/list_install_components.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/install.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/install/local.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/CMakeFiles/install/strip.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/__idf_servo.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/edit_cache.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/rebuild_cache.dir
@@ -1489,3 +1496,10 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/list_install_c
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/install.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/install/local.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/install/strip.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/__idf_wifi_connect.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/edit_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/rebuild_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/list_install_components.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/install.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/install/local.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/CMakeFiles/install/strip.dir

@@ -9706,9 +9706,11 @@ LOAD esp-idf/veml7700/libveml7700.a
 LOAD esp-idf/wiegand/libwiegand.a
 LOAD esp-idf/hx711_comp/libhx711_comp.a
 LOAD esp-idf/motorDC/libmotorDC.a
+LOAD esp-idf/servidor/libservidor.a
 LOAD esp-idf/servo/libservo.a
 LOAD esp-idf/variables_globales/libvariables_globales.a
 LOAD esp-idf/ultra/libultra.a
+LOAD esp-idf/wifi_connect/libwifi_connect.a
 LOAD esp-idf/app_trace/libapp_trace.a
 LOAD esp-idf/app_trace/libapp_trace.a
 LOAD esp-idf/cmock/libcmock.a

@@ -1009,6 +1009,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/cmake_install.cmake")
 endif()
 
@@ -1020,5 +1025,10 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wifi_connect/cmake_install.cmake")
 endif()
 
