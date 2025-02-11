@@ -4,8 +4,7 @@
 #include <ultrasonic.h>
 #include <esp_err.h>
 
-void ultrasonic_task(void *pvParameters);
 void iniciar_ultrasonico();
-void obtener_medicion_ultrasonico();
+void medir_ultrasonico_task(void *pvParameters);
 
 #endif // ULTRASONIC_H

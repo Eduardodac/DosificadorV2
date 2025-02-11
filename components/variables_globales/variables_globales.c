@@ -17,14 +17,14 @@ void create_mutex_estadoDosificacion() {
 }
 
 //variables relacionadas a la lectura del sensor ultrasónico
-float ultraMeasure;
-SemaphoreHandle_t xMutexUltraMeasure = NULL;
+float ultrasonicoMedicion;
+SemaphoreHandle_t xMutexUltrasonicoMedicion = NULL;
 
-void create_mutex_ultraMeasure() {
-    if (xMutexUltraMeasure == NULL) {
-        xMutexUltraMeasure = xSemaphoreCreateMutex();
-        if (xMutexUltraMeasure == NULL) {
-            printf("Error: No se pudo crear el mutex ultraMeasure\n");
+void create_mutex_ultrasonicoMedicion() {
+    if (xMutexUltrasonicoMedicion == NULL) {
+        xMutexUltrasonicoMedicion = xSemaphoreCreateMutex();
+        if (xMutexUltrasonicoMedicion == NULL) {
+            printf("Error: No se pudo crear el mutex ultrasonicoMedicion\n");
         }
     }
 }

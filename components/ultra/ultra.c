@@ -15,72 +15,29 @@ ultrasonic_sensor_t sensor = {
     .trigger_pin = TRIGGER_GPIO,
     .echo_pin = ECHO_GPIO};
 
-void ultrasonic_task(void *pvParameters)
+void iniciar_ultrasonico()
 {
-    ultrasonic_sensor_t sensor = {
-        .trigger_pin = TRIGGER_GPIO,
-        .echo_pin = ECHO_GPIO};
-
-    ultrasonic_init(&sensor);
-
-    while (true)
-    {
-        float distance;
-        esp_err_t res = ultrasonic_measure(&sensor, MAX_DISTANCE_CM, &distance);
-        if (res != ESP_OK)
-        {
-            ESP_LOGI(TAGULTRA, "Error %d: ", res);
-            switch (res)
-            {
-            case ESP_ERR_ULTRASONIC_PING:
-                ESP_LOGI(TAGULTRA, "Cannot ping (device is in invalid state)");
-                break;
-            case ESP_ERR_ULTRASONIC_PING_TIMEOUT:
-                ESP_LOGI(TAGULTRA, "Ping timeout (no device found)\n");
-                break;
-            case ESP_ERR_ULTRASONIC_ECHO_TIMEOUT:
-                ESP_LOGI(TAGULTRA, "Echo timeout (i.e. distance too big)\n");
-                break;
-            default:
-                ESP_LOGI(TAGULTRA, "%s\n", esp_err_to_name(res));
-            }
-        }
-        else
-        {
-            ESP_LOGI(TAGULTRA, "Distance: %0.04f cm\n", distance * 100);
-
-            if (xSemaphoreTake(xMutexUltraMeasure, portMAX_DELAY) == pdTRUE)
-            {
-                ultraMeasure = distance * 100;
-                xSemaphoreGive(xMutexUltraMeasure);
-            }
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
-}
-
-void iniciar_ultrasonico(){
     ultrasonic_init(&sensor);
 }
 
-void obtener_medicion_ultrasonico()
+void medir_ultrasonico_task(void *pvParameters)
 {
-    float distance;
-    esp_err_t res = ultrasonic_measure(&sensor, MAX_DISTANCE_CM, &distance);
+    float distancia;
+    esp_err_t res = ultrasonic_measure(&sensor, MAX_DISTANCE_CM, &distancia);
+
     if (res != ESP_OK)
     {
-        ESP_LOGI(TAGULTRA, "Error %d: ", res);
+        ESP_LOGE(TAGULTRA, "Error %d: ", res);
         switch (res)
         {
         case ESP_ERR_ULTRASONIC_PING:
-            ESP_LOGI(TAGULTRA, "Cannot ping (device is in invalid state)");
+            ESP_LOGE(TAGULTRA, "Ping inválido (dispositivo en estado inválido)");
             break;
         case ESP_ERR_ULTRASONIC_PING_TIMEOUT:
-            ESP_LOGI(TAGULTRA, "Ping timeout (no device found)\n");
+            ESP_LOGE(TAGULTRA, "Ping timeout (dispositivo no encontrado)\n");
             break;
         case ESP_ERR_ULTRASONIC_ECHO_TIMEOUT:
-            ESP_LOGI(TAGULTRA, "Echo timeout (i.e. distance too big)\n");
+            ESP_LOGI(TAGULTRA, "Echo timeout (i.e. distancia fuera de rango)\n");
             break;
         default:
             ESP_LOGI(TAGULTRA, "%s\n", esp_err_to_name(res));
@@ -88,13 +45,14 @@ void obtener_medicion_ultrasonico()
     }
     else
     {
-        ESP_LOGI(TAGULTRA, "Distance: %0.04f cm\n", distance * 100);
+        ESP_LOGI(TAGULTRA, "Distancia: %0.04f cm\n", distancia * 100);
 
-        if (xSemaphoreTake(xMutexUltraMeasure, portMAX_DELAY) == pdTRUE)
+        if (xSemaphoreTake(xMutexUltrasonicoMedicion, portMAX_DELAY) == pdTRUE)
         {
-            ultraMeasure = distance * 100;
-            xSemaphoreGive(xMutexUltraMeasure);
+            ultrasonicoMedicion = distancia * 100;
+            xSemaphoreGive(xMutexUltrasonicoMedicion);
         }
     }
 
+    vTaskDelay(pdMS_TO_TICKS(1000));
 }

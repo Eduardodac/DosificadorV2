@@ -35,16 +35,6 @@ static void on_timer(void *arg)
     printf("Status: %d\n", statusDosificacion);
 }
 
-// void on_timer3(TimerHandle_t xTimer)
-// {
-//     printf("time 3 hits %lld\n", esp_timer_get_time() / 1000);
-//     if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
-//     {
-//         status = 0;
-//         xSemaphoreGive(xMutexEstadoDosificacion);
-//     }
-// }
-
 // void app_main(void)
 // {
 //     tarar_bascula();
@@ -94,7 +84,7 @@ static void on_timer(void *arg)
 //     vTaskDelay(pdMS_TO_TICKS(500));
 // }
 
-// prueba de timers y conección de wifi
+// prueba de timers y coneión de wifi
 
 void app_main()
 {
