@@ -1,0 +1,61 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+0x4015dd6a: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4015711d: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4016d1d9: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:210
+0x4008f969: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:220
+0x400d7738: parse_confirmar_dosificacion at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:58 (discriminator 1)
+0x400d77ed: confirmar_dosificacion_get at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:105
+0x400d7614: app_main at C:/TrabajoTerminalII/DosificadorV2/main/main.c:106
+0x4016c85f: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x40089eb9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+0x4015dd6a: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4015711d: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4016d1d9: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:210
+0x4008f969: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:220
+0x400d7738: parse_confirmar_dosificacion at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:58 (discriminator 1)
+0x400d77ed: confirmar_dosificacion_get at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:105
+0x400d7614: app_main at C:/TrabajoTerminalII/DosificadorV2/main/main.c:106
+0x4016c85f: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x40089eb9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400014fa: strlen in ROM
+0x4015dd6a: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4015711d: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4016d1d9: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:210
+0x4008f969: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3/components/log/log.c:220
+0x400d7738: parse_confirmar_dosificacion at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:58 (discriminator 1)
+0x400d77ed: confirmar_dosificacion_get at C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c:105
+0x400d7614: app_main at C:/TrabajoTerminalII/DosificadorV2/main/main.c:106
+0x4016c85f: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x40089eb9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

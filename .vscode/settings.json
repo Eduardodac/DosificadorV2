@@ -17,6 +17,7 @@
     "files.associations": {
         "freertos.h": "c",
         "esp_log.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "task.h": "c"
     }
 }

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "DosificadorV2",
-    "project_version":    "f58d7d6-dirty",
+    "project_version":    "7d163b5-dirty",
     "project_path":       "C:/TrabajoTerminalII/DosificadorV2",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.3",
     "build_dir":          "C:/TrabajoTerminalII/DosificadorV2/build",
@@ -1840,7 +1840,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/TrabajoTerminalII/DosificadorV2/main/main.c", "C:/TrabajoTerminalII/DosificadorV2/build/azure.crt.S" ],
+            "sources": [ "C:/TrabajoTerminalII/DosificadorV2/main/main.c" ],
             "include_dirs": [ "." ]
         },
         "max1704x": {
@@ -2465,12 +2465,12 @@
             "dir": "C:/TrabajoTerminalII/DosificadorV2/components/servidor",
             "type": "LIBRARY",
             "lib": "__idf_servidor",
-            "reqs": [ "esp_http_client", "esp_timer", "log", "freertos" ],
+            "reqs": [ "esp_http_client", "esp_timer", "log", "json", "freertos" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servidor/libservidor.a",
-            "sources": [ "C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c" ],
+            "sources": [ "C:/TrabajoTerminalII/DosificadorV2/components/servidor/servidor.c", "C:/TrabajoTerminalII/DosificadorV2/build/azure.crt.S" ],
             "include_dirs": [ "." ]
         },
         "servo": {
@@ -5385,7 +5385,7 @@
             "prefix": "idf",
             "dir": "C:/TrabajoTerminalII/DosificadorV2/components/servidor",
             "lib": "__idf_servidor",
-            "reqs": [ "esp_http_client", "esp_timer", "log", "freertos" ],
+            "reqs": [ "esp_http_client", "esp_timer", "log", "json", "freertos" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
