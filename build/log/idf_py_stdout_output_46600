@@ -1,0 +1,334 @@
+�&�+
+B��J���� chi�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 10 2025 19:06:31[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2562ch (153132) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035654 vaddr=3ffb0000 size=03e48h ( 15944) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=000394a4 vaddr=40080000 size=06b74h ( 27508) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9e8f8h (649464) map[0m
+[0;32mI (397) esp_image: segment 4: paddr=000de920 vaddr=40086b74 size=1067ch ( 67196) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (455) cpu_start: Pro cpu start user code[0m
+[0;32mI (455) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     DosificadorV2[0m
+[0;32mI (464) app_init: App version:      7d163b5-dirty[0m
+[0;32mI (469) app_init: Compile time:     Feb 10 2025 22:14:15[0m
+[0;32mI (475) app_init: ELF file SHA256:  87f51de40...[0m
+[0;32mI (480) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (485) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (490) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (495) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (500) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (507) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB8660 len 000279A0 (158 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (525) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 400971F0 len 00008E10 (35 KiB): IRAM[0m
+[0;32mI (539) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+I (591) wifi:wifi driver task: 3ffc0214, prio:23, stack:6656, core=0
+I (591) wifi:wifi firmware version: 0caa81945
+I (591) wifi:wifi certification version: v7.0
+I (591) wifi:config NVS flash: enabled
+I (591) wifi:config nano formating: disabled
+I (601) wifi:Init data frame dynamic rx buffer num: 32
+I (601) wifi:Init static rx mgmt buffer num: 5
+I (611) wifi:Init management short buffer num: 32
+I (611) wifi:Init dynamic tx buffer num: 32
+I (611) wifi:Init static rx buffer size: 1600
+I (621) wifi:Init static rx buffer num: 10
+I (621) wifi:Init dynamic rx buffer num: 32
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (631) wifi_init: accept mbox: 6[0m
+[0;32mI (631) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (661) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (671) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (751) wifi:mode : sta (d4:d4:da:59:e7:bc)
+I (751) wifi:enable tsf
+[0;32mI (751) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (1501) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0
+I (1501) wifi:state: init -> auth (0xb0)
+I (1511) wifi:state: auth -> assoc (0x0)
+I (1511) wifi:state: assoc -> run (0x10)
+I (1531) wifi:connected with TT-535555, aid = 1, channel 5, BW20, bssid = 22:5b:ad:89:a9:dd
+I (1531) wifi:security: WPA2-PSK, phy: bgn, rssi: -31
+I (1531) wifi:pm start, type: 1
+
+I (1531) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (1541) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (1561) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+I (1571) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2551) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (2551) esp_netif_handlers: sta ip: 192.168.137.47, mask: 255.255.255.0, gw: 192.168.137.1[0m
+I (2561) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (4251) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (4251) Server Response:: dosificar: false[0m
+[0;32mI (4251) Server Response:: habilitado: true[0m
+[0;32mI (4261) Server Response:: hora: 2025-02-10T22:43:52.5651862[0m
+[0;31mE (4261) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+[0;32mI (4271) main_task: Returned from app_main()[0m
+Timer expired 62017
+[0;32mI (63911) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (63911) Server Response:: dosificar: false[0m
+[0;32mI (63911) Server Response:: habilitado: true[0m
+[0;32mI (63921) Server Response:: hora: 2025-02-10T22:44:52.3207923[0m
+[0;31mE (63921) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 122017
+[0;32mI (123931) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (123931) Server Response:: dosificar: false[0m
+[0;32mI (123931) Server Response:: habilitado: true[0m
+[0;32mI (123931) Server Response:: hora: 2025-02-10T22:45:52.3313916[0m
+[0;31mE (123941) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 182017
+[0;32mI (183911) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (183911) Server Response:: dosificar: false[0m
+[0;32mI (183911) Server Response:: habilitado: true[0m
+[0;32mI (183911) Server Response:: hora: 2025-02-10T22:46:52.3113355[0m
+[0;31mE (183921) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 242017
+[0;32mI (243891) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (243891) Server Response:: dosificar: false[0m
+[0;32mI (243891) Server Response:: habilitado: true[0m
+[0;32mI (243901) Server Response:: hora: 2025-02-10T22:47:52.2966178[0m
+[0;31mE (243901) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 302017
+[0;32mI (303921) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (303931) Server Response:: dosificar: true[0m
+[0;32mI (303931) Server Response:: habilitado: true[0m
+[0;32mI (303931) Server Response:: hora: 2025-02-10T22:48:52.3102226[0m
+Evento existoso
+Timer expired 362017
+[0;32mI (363931) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (363931) Server Response:: dosificar: true[0m
+[0;32mI (363931) Server Response:: habilitado: true[0m
+[0;32mI (363941) Server Response:: hora: 2025-02-10T22:49:52.3195725[0m
+Evento existoso
+Timer expired 422017
+[0;32mI (428031) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (428031) Server Response:: dosificar: false[0m
+[0;32mI (428031) Server Response:: habilitado: true[0m
+[0;32mI (428031) Server Response:: hora: 2025-02-10T22:50:56.4259519[0m
+[0;31mE (428041) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 482017
+[0;32mI (488051) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (488061) Server Response:: dosificar: true[0m
+[0;32mI (488061) Server Response:: habilitado: true[0m
+[0;32mI (488061) Server Response:: hora: 2025-02-10T22:51:56.355386[0m
+Evento existoso
+Timer expired 542017
+[0;32mI (543921) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (543921) Server Response:: dosificar: true[0m
+[0;32mI (543921) Server Response:: habilitado: true[0m
+[0;32mI (543931) Server Response:: hora: 2025-02-10T22:52:52.3146182[0m
+Evento existoso
+Timer expired 602017
+[0;32mI (603941) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (603941) Server Response:: dosificar: false[0m
+[0;32mI (603941) Server Response:: habilitado: true[0m
+[0;32mI (603941) Server Response:: hora: 2025-02-10T22:53:52.3179251[0m
+[0;31mE (603951) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 662017
+[0;32mI (663901) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (663901) Server Response:: dosificar: false[0m
+[0;32mI (663901) Server Response:: habilitado: true[0m
+[0;32mI (663901) Server Response:: hora: 2025-02-10T22:54:52.2886823[0m
+[0;31mE (663911) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 722017
+[0;32mI (723931) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (723931) Server Response:: dosificar: false[0m
+[0;32mI (723931) Server Response:: habilitado: true[0m
+[0;32mI (723931) Server Response:: hora: 2025-02-10T22:55:52.307817[0m
+[0;31mE (723941) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 782017
+[0;32mI (784611) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (784611) Server Response:: dosificar: false[0m
+[0;32mI (784611) Server Response:: habilitado: true[0m
+[0;32mI (784611) Server Response:: hora: 2025-02-10T22:56:52.9942974[0m
+[0;31mE (784621) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 842017
+[0;32mI (844011) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (844011) Server Response:: dosificar: false[0m
+[0;32mI (844011) Server Response:: habilitado: true[0m
+[0;32mI (844011) Server Response:: hora: 2025-02-10T22:57:52.3993026[0m
+[0;31mE (844021) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 902017
+[0;32mI (904201) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (904201) Server Response:: dosificar: false[0m
+[0;32mI (904201) Server Response:: habilitado: true[0m
+[0;32mI (904201) Server Response:: hora: 2025-02-10T22:58:52.5851424[0m
+[0;31mE (904211) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 962017
+[0;32mI (963931) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (963931) Server Response:: dosificar: false[0m
+[0;32mI (963931) Server Response:: habilitado: true[0m
+[0;32mI (963941) Server Response:: hora: 2025-02-10T22:59:52.3196363[0m
+[0;31mE (963951) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1022017
+[0;32mI (1024121) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1024121) Server Response:: dosificar: false[0m
+[0;32mI (1024121) Server Response:: habilitado: true[0m
+[0;32mI (1024131) Server Response:: hora: 2025-02-10T23:00:52.494671[0m
+[0;31mE (1024131) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1082017
+[0;32mI (1084141) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1084141) Server Response:: dosificar: false[0m
+[0;32mI (1084141) Server Response:: habilitado: true[0m
+[0;32mI (1084141) Server Response:: hora: 2025-02-10T23:01:52.5134901[0m
+[0;31mE (1084151) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1142017
+[0;32mI (1143981) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1143981) Server Response:: dosificar: false[0m
+[0;32mI (1143991) Server Response:: habilitado: true[0m
+[0;32mI (1143991) Server Response:: hora: 2025-02-10T23:02:52.366647[0m
+[0;31mE (1144001) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1202017
+[0;32mI (1203991) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1204001) Server Response:: dosificar: false[0m
+[0;32mI (1204001) Server Response:: habilitado: true[0m
+[0;32mI (1204001) Server Response:: hora: 2025-02-10T23:03:52.3733484[0m
+[0;31mE (1204011) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1262017
+[0;32mI (1264071) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1264071) Server Response:: dosificar: false[0m
+[0;32mI (1264071) Server Response:: habilitado: true[0m
+[0;32mI (1264071) Server Response:: hora: 2025-02-10T23:04:52.4463668[0m
+[0;31mE (1264081) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1322017
+[0;32mI (1324061) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1324071) Server Response:: dosificar: false[0m
+[0;32mI (1324071) Server Response:: habilitado: true[0m
+[0;32mI (1324071) Server Response:: hora: 2025-02-10T23:05:52.4430823[0m
+[0;31mE (1324081) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1382017
+[0;32mI (1383981) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1383981) Server Response:: dosificar: false[0m
+[0;32mI (1383981) Server Response:: habilitado: true[0m
+[0;32mI (1383991) Server Response:: hora: 2025-02-10T23:06:52.353495[0m
+[0;31mE (1383991) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1442017
+[0;32mI (1444031) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1444031) Server Response:: dosificar: false[0m
+[0;32mI (1444031) Server Response:: habilitado: true[0m
+[0;32mI (1444031) Server Response:: hora: 2025-02-10T23:07:52.402709[0m
+[0;31mE (1444041) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1502017
+[0;32mI (1504111) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1504111) Server Response:: dosificar: false[0m
+[0;32mI (1504111) Server Response:: habilitado: true[0m
+[0;32mI (1504111) Server Response:: hora: 2025-02-10T23:08:52.4711861[0m
+[0;31mE (1504121) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1562017
+[0;32mI (1563951) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1563951) Server Response:: dosificar: false[0m
+[0;32mI (1563951) Server Response:: habilitado: true[0m
+[0;32mI (1563951) Server Response:: hora: 2025-02-10T23:09:52.3152154[0m
+[0;31mE (1563961) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1622017
+[0;32mI (1624101) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1624101) Server Response:: dosificar: false[0m
+[0;32mI (1624101) Server Response:: habilitado: true[0m
+[0;32mI (1624101) Server Response:: hora: 2025-02-10T23:10:52.4662496[0m
+[0;31mE (1624111) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1682017
+[0;32mI (1684121) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1684121) Server Response:: dosificar: false[0m
+[0;32mI (1684121) Server Response:: habilitado: true[0m
+[0;32mI (1684131) Server Response:: hora: 2025-02-10T23:11:52.4929396[0m
+[0;31mE (1684131) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido
+Timer expired 1742017
+[0;32mI (1744081) Server Response:: HTTP GET status = 200
+[0m
+[0;32mI (1744081) Server Response:: dosificar: false[0m
+[0;32mI (1744081) Server Response:: habilitado: true[0m
+[0;32mI (1744081) Server Response:: hora: 2025-02-10T23:12:52.4418733[0m
+[0;31mE (1744091) Server Response:: El campo 'dosificar' no es true[0m
+Evento Fallido

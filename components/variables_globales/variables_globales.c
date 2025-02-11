@@ -2,15 +2,15 @@
 #include "freertos/semphr.h"
 #include "variables_globales.h"
 
-SemaphoreHandle_t xMutexEstadoActivacion = NULL;
+SemaphoreHandle_t xMutexEstadoDosificacion = NULL;
 
 //variables relacionadas a la lectura del botón 
-int estadoActivacion = 1;
+int estadoDosificacion = 1;
 
-void create_mutex_estadoActivacion() {
-    if (xMutexEstadoActivacion == NULL) {
-        xMutexEstadoActivacion = xSemaphoreCreateMutex();
-        if (xMutexEstadoActivacion == NULL) {
+void create_mutex_estadoDosificacion() {
+    if (xMutexEstadoDosificacion == NULL) {
+        xMutexEstadoDosificacion = xSemaphoreCreateMutex();
+        if (xMutexEstadoDosificacion == NULL) {
             printf("Error: No se pudo crear el mutex compartido\n");
         }
     }

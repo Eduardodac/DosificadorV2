@@ -14,29 +14,34 @@
 #include "servidor.h"
 
 // static float limite_bascula=150;
-int status = 0;
+int statusDosificacion = 0;
 
 float medicion_bascula = 0;
-int *confirmacion = 0;
+int *confirmacionDosificador = 0;
 
 static void on_timer(void *arg)
 {
-    confirmar_dosificacion_get(&confirmacion);
+    confirmar_dosificacion_get(&confirmacionDosificador);
 
-    if(confirmacion == 1){
-        printf("Evento existoso\n");
-    }else{
-        printf("Evento Fallido\n");
+    if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
+    {
+        if (confirmacionDosificador)
+            statusDosificacion = 1;
+        else
+            statusDosificacion = 0;
+        xSemaphoreGive(xMutexEstadoDosificacion);
     }
+
+    printf("Status: %d\n", statusDosificacion);
 }
 
 // void on_timer3(TimerHandle_t xTimer)
 // {
 //     printf("time 3 hits %lld\n", esp_timer_get_time() / 1000);
-//     if (xSemaphoreTake(xMutexEstadoActivacion, portMAX_DELAY) == pdTRUE)
+//     if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
 //     {
 //         status = 0;
-//         xSemaphoreGive(xMutexEstadoActivacion);
+//         xSemaphoreGive(xMutexEstadoDosificacion);
 //     }
 // }
 
@@ -44,7 +49,7 @@ static void on_timer(void *arg)
 // {
 //     tarar_bascula();
 //     iniciar_ultrasonico();
-//     create_mutex_estadoActivacion();
+//     create_mutex_estadoDosificacion();
 //     create_mutex_ultraMeasure();
 
 //     // TimerHandle_t xTimer = xTimerCreate("my first timer", pdMS_TO_TICKS(60000), true, NULL, on_timer);
@@ -72,10 +77,10 @@ static void on_timer(void *arg)
 //         motor_dc_set_speed(450);
 //         vTaskDelay(pdMS_TO_TICKS(300));
 //         servo_update_angle(20);
-//         if (xSemaphoreTake(xMutexEstadoActivacion, portMAX_DELAY) == pdTRUE)
+//         if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
 //         {
 //             status = 0;
-//             xSemaphoreGive(xMutexEstadoActivacion);
+//             xSemaphoreGive(xMutexEstadoDosificacion);
 //         }
 
 //         vTaskDelay(pdMS_TO_TICKS(10000));
@@ -89,28 +94,34 @@ static void on_timer(void *arg)
 //     vTaskDelay(pdMS_TO_TICKS(500));
 // }
 
-//prueba de timers y conección de wifi
+// prueba de timers y conección de wifi
 
-void app_main(){
+void app_main()
+{
     ESP_ERROR_CHECK(nvs_flash_init());
+    create_mutex_estadoDosificacion();
     wifi_connect_init();
-    ESP_ERROR_CHECK(wifi_connect_sta("TT-535555","raizProyecto01",10000));
+    ESP_ERROR_CHECK(wifi_connect_sta("TT-535555", "raizProyecto01", 10000));
 
     esp_timer_handle_t timer;
     esp_timer_create_args_t timer_args = {
         .callback = &on_timer,
         .arg = NULL,
         .dispatch_method = ESP_TIMER_TASK,
-        .name = "quote_timer"
-    };
+        .name = "quote_timer"};
 
     esp_timer_create(&timer_args, &timer);
     esp_timer_start_periodic(timer, 60000000);
-    confirmar_dosificacion_get(&confirmacion);
+    confirmar_dosificacion_get(&confirmacionDosificador);
 
-    if(confirmacion == 1){
-        printf("Evento existoso\n");
-    }else{
-        printf("Evento Fallido\n");
+    if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
+    {
+        if (confirmacionDosificador)
+            statusDosificacion = 1;
+        else
+            statusDosificacion = 0;
+        xSemaphoreGive(xMutexEstadoDosificacion);
     }
+
+    printf("Status: %d\n", statusDosificacion);
 }
