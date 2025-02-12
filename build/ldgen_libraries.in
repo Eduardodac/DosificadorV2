@@ -171,10 +171,10 @@ $<TARGET_FILE:__idf_tsys01>
 $<TARGET_FILE:__idf_ultrasonic>
 $<TARGET_FILE:__idf_veml7700>
 $<TARGET_FILE:__idf_wiegand>
+$<TARGET_FILE:__idf_variables_globales>
 $<TARGET_FILE:__idf_hx711_comp>
 $<TARGET_FILE:__idf_motorDC>
 $<TARGET_FILE:__idf_servidor>
 $<TARGET_FILE:__idf_servo>
-$<TARGET_FILE:__idf_variables_globales>
 $<TARGET_FILE:__idf_ultra>
 $<TARGET_FILE:__idf_wifi_connect>

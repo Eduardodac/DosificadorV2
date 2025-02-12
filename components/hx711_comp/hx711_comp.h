@@ -3,6 +3,6 @@
 
 // void test(void *pvParameters);
 void tarar_bascula();
-float medir_bascula();
+void medir_bascula(void *pvParameters);
 
 #endif // ULTRASONIC_H

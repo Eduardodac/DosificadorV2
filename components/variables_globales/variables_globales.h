@@ -9,11 +9,11 @@ extern int estadoDosificacion;
 extern float ultrasonicoMedicion;
 extern SemaphoreHandle_t xMutexUltrasonicoMedicion;
 
-extern float loadCellMeasure;
-extern SemaphoreHandle_t xMutexLoadCellMeasure;
+extern float basculaMedicion;
+extern SemaphoreHandle_t xMutexBasculaMedicion;
 
 void create_mutex_estadoDosificacion();
 void create_mutex_ultrasonicoMedicion();
-void create_mutex_loadCellMeasure();
+void create_mutex_basculaMedicion();
 
 #endif 

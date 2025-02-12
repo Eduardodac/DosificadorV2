@@ -1454,6 +1454,13 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wiegand/CMakeFiles/list_install
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wiegand/CMakeFiles/install.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wiegand/CMakeFiles/install/local.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wiegand/CMakeFiles/install/strip.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/__idf_variables_globales.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/edit_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/rebuild_cache.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/list_install_components.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install/local.dir
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install/strip.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/CMakeFiles/__idf_hx711_comp.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/CMakeFiles/edit_cache.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/CMakeFiles/rebuild_cache.dir
@@ -1482,13 +1489,6 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/list_install_c
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/install.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/install/local.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/CMakeFiles/install/strip.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/__idf_variables_globales.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/edit_cache.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/rebuild_cache.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/list_install_components.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install/local.dir
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/CMakeFiles/install/strip.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/__idf_ultra.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/edit_cache.dir
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/CMakeFiles/rebuild_cache.dir

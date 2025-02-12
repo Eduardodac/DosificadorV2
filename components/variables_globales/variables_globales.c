@@ -30,14 +30,14 @@ void create_mutex_ultrasonicoMedicion() {
 }
 
 //variables relacionada a la lectura de la báscula
-float loadCellMeasure;
-SemaphoreHandle_t xMutexLoadCellMeasure = NULL;
+float basculaMedicion;
+SemaphoreHandle_t xMutexBasculaMedicion = NULL;
 
-void create_mutex_loadCellMeasure() {
-    if (xMutexLoadCellMeasure == NULL) {
-        xMutexLoadCellMeasure = xSemaphoreCreateMutex();
-        if (xMutexLoadCellMeasure == NULL) {
-            printf("Error: No se pudo crear el mutex loadCellMeasure\n");
+void create_mutex_basculaMedicion() {
+    if (xMutexBasculaMedicion == NULL) {
+        xMutexBasculaMedicion = xSemaphoreCreateMutex();
+        if (xMutexBasculaMedicion == NULL) {
+            printf("Error: No se pudo crear el mutex basculaMedicion\n");
         }
     }
 }

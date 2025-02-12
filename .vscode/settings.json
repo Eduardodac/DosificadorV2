@@ -20,6 +20,7 @@
         "stdio.h": "c",
         "task.h": "c",
         "semphr.h": "c",
-        "variables_globales.h": "c"
+        "variables_globales.h": "c",
+        "ultrasonic.h": "c"
     }
 }

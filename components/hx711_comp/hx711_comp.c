@@ -2,6 +2,7 @@
 #include <esp_log.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include "variables_globales.h"
 #include <hx711.h>
 
 static const char *TAGHX711 = "hx711-example";
@@ -46,21 +47,22 @@ void tarar_bascula()
     }
 }
 
-float medir_bascula()
+void medir_bascula(void *pvParameters)
 {
+
+    int limiteMedicion = *(int *)pvParameters;
+
     esp_err_t err_tarado = hx711_wait(&hx711, 1000);
     if (err_tarado != ESP_OK)
     {
-        ESP_LOGE(TAGHX711, "Device not found: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
-        return 0;
+        ESP_LOGE(TAGHX711, "Dispositivo no encontrado: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
     }
 
     int32_t data;
     err_tarado = hx711_read_average(&hx711, 20, &data);
     if (err_tarado != ESP_OK)
     {
-        ESP_LOGE(TAGHX711, "Could not read data: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
-        return 0;
+        ESP_LOGE(TAGHX711, "No es posible la lectura: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
     }
 
     // ESP_LOGI(TAGHX711, "Raw data: %" PRIi32, data);
@@ -69,6 +71,14 @@ float medir_bascula()
     ESP_LOGI(TAGHX711, "Medida: %f grms.", measure);
     vTaskDelay(pdMS_TO_TICKS(100));
 
-    return measure;
+    if (xSemaphoreTake(xMutexUltrasonicoMedicion, portMAX_DELAY) == pdTRUE)
+        {
+            if(measure < limiteMedicion)
+                basculaMedicion = 1;
+            else{
+                basculaMedicion = 0;
+            }
+            xSemaphoreGive(xMutexUltrasonicoMedicion);
+        }
 
 }
