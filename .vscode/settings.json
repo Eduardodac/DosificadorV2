@@ -21,6 +21,10 @@
         "task.h": "c",
         "semphr.h": "c",
         "variables_globales.h": "c",
-        "ultrasonic.h": "c"
+        "ultrasonic.h": "c",
+        "cjson.h": "c",
+        "netdb.h": "c",
+        "string.h": "c",
+        "ultra.h": "c"
     }
 }

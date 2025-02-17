@@ -11,7 +11,7 @@
 #include "hx711_comp.h"
 #include "nvs_flash.h"
 #include "wifi_connect.h"
-#include "servidor.h"
+#include "consumo_data.h"
 
 // static float limite_bascula=150;
 int statusDosificacion = 0;
@@ -21,7 +21,7 @@ int *confirmacionDosificador = 0;
 
 static void on_timer(void *arg)
 {
-    confirmar_dosificacion_get(&confirmacionDosificador);
+    obtener_confirmacion_dosificador(&confirmacionDosificador);
 
     if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
     {
@@ -102,7 +102,7 @@ void app_main()
 
     esp_timer_create(&timer_args, &timer);
     esp_timer_start_periodic(timer, 60000000);
-    confirmar_dosificacion_get(&confirmacionDosificador);
+    obtener_confirmacion_dosificador(&confirmacionDosificador);
 
     if (xSemaphoreTake(xMutexEstadoDosificacion, portMAX_DELAY) == pdTRUE)
     {

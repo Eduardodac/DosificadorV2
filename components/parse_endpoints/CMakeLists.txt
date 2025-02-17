@@ -1,0 +1,10 @@
+idf_component_register(
+    SRCS 
+        "parse_endpoints.c"
+    INCLUDE_DIRS 
+        "."
+    REQUIRES
+    log
+    json
+    "freertos" 
+    )
