@@ -1,7 +1,9 @@
 idf_component_register(
                     SRCS 
-                        "envio_data.c"
+                        "consumo_endpoints.c"
                     INCLUDE_DIRS "."
+                    EMBED_TXTFILES
+                        "../../cert/azure.crt"
                     REQUIRES
                         esp_http_client
                         log

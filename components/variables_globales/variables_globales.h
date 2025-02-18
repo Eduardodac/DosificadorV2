@@ -1,9 +1,11 @@
 #ifndef VARIABLES_GLOBALES_H
 #define VARIABLES_GLOBALES_H
 
+#include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
 
-extern const uint8_t cert[] asm("_binary_azure_crt_start");
+extern const char *UUIDDosificador;
+extern const char *UUIDCollar;
 
 extern SemaphoreHandle_t xMutexEstadoDosificacion;
 extern int estadoDosificacion;

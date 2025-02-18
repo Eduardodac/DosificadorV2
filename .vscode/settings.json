@@ -26,6 +26,7 @@
         "netdb.h": "c",
         "string.h": "c",
         "ultra.h": "c",
-        "parse_endpoints.h": "c"
+        "parse_endpoints.h": "c",
+        "esp_err.h": "c"
     }
 }

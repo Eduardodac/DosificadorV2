@@ -1,4 +1,4 @@
-# Install script for directory: C:/TrabajoTerminalII/DosificadorV2/components/consumo_data
+# Install script for directory: C:/TrabajoTerminalII/DosificadorV2/components/led_handle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS 
+        "led_handle.c"
+    INCLUDE_DIRS 
+        "."
+    REQUIRES
+        log
+        "freertos"
+    )

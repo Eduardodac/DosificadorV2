@@ -7,4 +7,5 @@ idf_component_register(
         log
         json
         "freertos" 
+        "variables_globales"
     )

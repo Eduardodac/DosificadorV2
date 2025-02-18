@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "parse_endpoints.h"
+#include "variables_globales.h"
 #include "esp_log.h"
 #include "cJSON.h"
 
@@ -64,4 +64,19 @@ esp_err_t confirmar_parse_dosificacion(char *confirmarDosificacionStr)
     cJSON_Delete(dataJson);
 
     return ESP_OK;
+}
+
+char *crear_post_body()
+{
+    cJSON *json_payload = cJSON_CreateObject();
+    cJSON_AddStringToObject(json_payload, "dosificadorId", UUIDDosificador);
+    cJSON_AddStringToObject(json_payload, "collarId", UUIDCollar);
+    cJSON_AddStringToObject(json_payload, "duracion", "5000");
+    cJSON_AddStringToObject(json_payload, "consumo", "10.85");
+
+    char *payload_body = cJSON_Print(json_payload);
+
+    printf("body: %s\n", payload_body);
+    cJSON_Delete(json_payload);
+    return payload_body;
 }

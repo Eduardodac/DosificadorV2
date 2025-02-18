@@ -173,9 +173,9 @@ C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/veml7700/libveml7700.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/wiegand/libwiegand.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/variables_globales/libvariables_globales.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/parse_endpoints/libparse_endpoints.a
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/consumo_data/libconsumo_data.a
-C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/envio_data/libenvio_data.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/consumo_endpoints/libconsumo_endpoints.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/hx711_comp/libhx711_comp.a
+C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/led_handle/libled_handle.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/motorDC/libmotorDC.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/servo/libservo.a
 C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/ultra/libultra.a
