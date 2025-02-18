@@ -1,6 +1,5 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
-#include "variables_globales.h"
 
 SemaphoreHandle_t xMutexEstadoDosificacion = NULL;
 

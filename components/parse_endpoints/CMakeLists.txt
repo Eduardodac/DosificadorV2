@@ -4,7 +4,7 @@ idf_component_register(
     INCLUDE_DIRS 
         "."
     REQUIRES
-    log
-    json
-    "freertos" 
+        log
+        json
+        "freertos" 
     )

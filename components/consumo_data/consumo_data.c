@@ -3,12 +3,12 @@
 #include "esp_http_client.h"
 #include "esp_log.h"
 #include "parse_endpoints.h"
+#include "variables_globales.h"
 
 static const char *TAGCONSUMODATA = "Server Response:";
 
 static const char *URL = "https://sistemamonitoreoalimentacionapi.azurewebsites.net/api/Horarios/confirmarDosificacion/02121b21-7f72-4054-9df1-c43777abcf49";
 
-extern const uint8_t cert[] asm("_binary_azure_crt_start");
 typedef struct chunk_payload_t
 {
     uint8_t *buffer;
