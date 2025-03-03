@@ -1,0 +1,99 @@
+[1/14] Building C object esp-idf/parse_endpoints/CMakeFiles/__idf_parse_endpoints.dir/parse_endpoints.c.obj
+C:/TrabajoTerminalII/DosificadorV2/components/parse_endpoints/parse_endpoints.c: In function 'crear_post_body':
+C:/TrabajoTerminalII/DosificadorV2/components/parse_endpoints/parse_endpoints.c:75:54: warning: passing argument 3 of 'cJSON_AddStringToObject' makes pointer from integer without a cast [-Wint-conversion]
+   75 |     cJSON_AddStringToObject(json_payload, "consumo", consumo);
+      |                                                      ^~~~~~~
+      |                                                      |
+      |                                                      int
+In file included from C:/TrabajoTerminalII/DosificadorV2/components/parse_endpoints/parse_endpoints.c:5:
+C:/Espressif/frameworks/esp-idf-v5.3/components/json/cJSON/cJSON.h:269:112: note: expected 'const char * const' but argument is of type 'int'
+  269 | CJSON_PUBLIC(cJSON*) cJSON_AddStringToObject(cJSON * const object, const char * const name, const char * const string);
+      |                                                                                             ~~~~~~~~~~~~~~~~~~~^~~~~~
+[2/14] Linking C static library esp-idf\parse_endpoints\libparse_endpoints.a
+[3/14] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\TrabajoTerminalII\DosificadorV2\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/TrabajoTerminalII/DosificadorV2/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[4/12] Building C object esp-idf/ultra/CMakeFiles/__idf_ultra.dir/ultra.c.obj
+[5/12] Linking C static library esp-idf\ultra\libultra.a
+[6/12] Building C object esp-idf/hx711_comp/CMakeFiles/__idf_hx711_comp.dir/hx711_comp.c.obj
+[7/12] Linking C static library esp-idf\hx711_comp\libhx711_comp.a
+[8/12] Generating ld/sections.ld
+[9/12] Linking CXX executable DosificadorV2.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/TrabajoTerminalII/DosificadorV2/build/DosificadorV2.bin
+[11/12] cmd.exe /C "cd /D C:\TrabajoTerminalII\DosificadorV2\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/TrabajoTerminalII/DosificadorV2/build/partition_table/partition-table.bin C:/TrabajoTerminalII/DosificadorV2/build/DosificadorV2.bin"
+DosificadorV2.bin binary size 0xeac70 bytes. Smallest app partition is 0x100000 bytes. 0x15390 bytes (8%) free.
+[11/12] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/TrabajoTerminalII/esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 DosificadorV2.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e0:5a:1b:77:7a:b0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000fafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16352...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16352 compressed) at 0x00001000 in 0.9 seconds (effective 243.7 kbit/s)...
+Hash of data verified.
+Compressed 961648 bytes to 603253...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d0e2... (5 %)
+Writing at 0x000274d3... (8 %)
+Writing at 0x0002bff5... (10 %)
+Writing at 0x0003333a... (13 %)
+Writing at 0x0003dc63... (16 %)
+Writing at 0x00043812... (18 %)
+Writing at 0x00049371... (21 %)
+Writing at 0x0004f380... (24 %)
+Writing at 0x000551c1... (27 %)
+Writing at 0x0005ae37... (29 %)
+Writing at 0x00060c8b... (32 %)
+Writing at 0x000668db... (35 %)
+Writing at 0x0006c85d... (37 %)
+Writing at 0x00071a73... (40 %)
+Writing at 0x000771a4... (43 %)
+Writing at 0x0007c98d... (45 %)
+Writing at 0x00081d5e... (48 %)
+Writing at 0x00087301... (51 %)
+Writing at 0x0008d1a9... (54 %)
+Writing at 0x00092d86... (56 %)
+Writing at 0x00098660... (59 %)
+Writing at 0x0009e1fe... (62 %)
+Writing at 0x000a4085... (64 %)
+Writing at 0x000a98de... (67 %)
+Writing at 0x000af58b... (70 %)
+Writing at 0x000b5c56... (72 %)
+Writing at 0x000bb64e... (75 %)
+Writing at 0x000c1166... (78 %)
+Writing at 0x000c6cbb... (81 %)
+Writing at 0x000cc4e9... (83 %)
+Writing at 0x000d2e83... (86 %)
+Writing at 0x000de5d7... (89 %)
+Writing at 0x000e4b12... (91 %)
+Writing at 0x000eaae2... (94 %)
+Writing at 0x000f0b90... (97 %)
+Writing at 0x000f6336... (100 %)
+Wrote 961648 bytes (603253 compressed) at 0x00010000 in 14.0 seconds (effective 549.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 422.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+DosificadorV2/build -P C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/run_serial_tool.cmake"

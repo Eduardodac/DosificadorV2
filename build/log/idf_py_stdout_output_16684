@@ -1,0 +1,212 @@
+�j%�(35) boot: chi�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27b94h (162708) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037bbc vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ba88 vaddr=40080000 size=04590h ( 17808) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a80a8h (688296) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e80d0 vaddr=40084590 size=12c88h ( 76936) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     DosificadorV2[0m
+[0;32mI (481) app_init: App version:      3187611-dirty[0m
+[0;32mI (486) app_init: Compile time:     Mar  2 2025 15:42:38[0m
+[0;32mI (492) app_init: ELF file SHA256:  e1d5a7fe1...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+I (608) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: 0caa81945
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: accept mbox: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (658) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5760[0m
+[0;32mI (668) wifi_init: tcp rx win: 5760[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (678) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (778) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (778) wifi:enable tsf
+[0;32mI (778) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (1038) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (1048) wifi:state: init -> auth (0xb0)
+I (1048) wifi:state: auth -> assoc (0x0)
+I (1048) wifi:state: assoc -> run (0x10)
+I (1068) wifi:connected with TT-535555, aid = 1, channel 1, BW20, bssid = 22:5b:ad:89:a9:dd
+I (1068) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (1068) wifi:pm start, type: 1
+
+I (1078) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (1088) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (1098) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1098) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+[0;32mI (2088) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (2088) esp_netif_handlers: sta ip: 192.168.137.140, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2088) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;32mI (2088) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (2098) ultrasonic:: Limite reestablecido
+[0m
+I (2108) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;31mE (9108) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9108) esp-tls: Failed to open new connection[0m
+[0;31mE (9108) transport_base: Failed to open a new connection[0m
+[0;31mE (9118) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (9118) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9128) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (9138) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (9268) hx711: Tarando...[0m
+[0;32mI (32098) ultrasonic:: Distancia: 17.0000 cm
+[0m
+[0;32mI (32098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (54278) hx711: Tareo listo... -250330[0m
+[0;33mW (54378) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (54378) SERVO: Connect timer and operator[0m
+[0;32mI (54378) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (54378) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (54388) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (54398) SERVO: Enable and start timer[0m
+[0;32mI (54398) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (54408) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (54418) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (54428) motorDC: Motor DC initialized[0m
+[0;32mI (56178) hx711: Medida: 0.000000 grms.[0m
+[0;32mI (56178) hx711: Caso 2[0m
+[0;32mI (62098) ultrasonic:: Distancia: 17.0000 cm
+[0m
+[0;32mI (62098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (65168) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (65168) Parse:: dosificar: false[0m
+[0;32mI (65168) Parse:: hora: 2025-03-02T16:40:36.7290263[0m
+Status: 0
+[0;32mI (67978) hx711: Medida: -0.078970 grms.[0m
+[0;32mI (67978) hx711: Caso 3[0m
+[0;32mI (79768) hx711: Medida: -0.065034 grms.[0m
+[0;32mI (79768) hx711: Caso 3[0m
+[0;32mI (91558) hx711: Medida: -0.125422 grms.[0m
+[0;32mI (91558) hx711: Caso 3[0m
+[0;32mI (92098) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;32mI (92098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (103348) hx711: Medida: -0.106841 grms.[0m
+[0;32mI (103348) hx711: Caso 3[0m
+[0;32mI (115138) hx711: Medida: 0.023226 grms.[0m
+[0;32mI (115138) hx711: Caso 3[0m
+[0;32mI (122098) ultrasonic:: Distancia: 17.0172 cm
+[0m
+[0;32mI (122098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (126938) hx711: Medida: 0.088260 grms.[0m
+[0;32mI (126938) hx711: Caso 3[0m
+[0;33mW (128468) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (128468) transport_base: Failed to open a new connection[0m
+[0;31mE (128468) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (128468) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT[0m
+Status: 0
+[0;32mI (138728) hx711: Medida: 0.032517 grms.[0m
+[0;32mI (138728) hx711: Caso 3[0m
+[0;32mI (150518) hx711: Medida: 0.065034 grms.[0m
+[0;32mI (150518) hx711: Caso 3[0m
+[0;32mI (152098) ultrasonic:: Distancia: 17.0000 cm
+[0m
+[0;32mI (152098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (162308) hx711: Medida: 0.037162 grms.[0m
+[0;32mI (162308) hx711: Caso 3[0m
+[0;32mI (174098) hx711: Medida: -0.032517 grms.[0m
+[0;32mI (174098) hx711: Caso 3[0m
+[0;32mI (182098) ultrasonic:: Distancia: 17.0000 cm
+[0m
+[0;32mI (182098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (185898) hx711: Medida: -0.102196 grms.[0m
+[0;32mI (185898) hx711: Caso 3[0m
+[0;31mE (189088) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (189088) esp-tls: Failed to open new connection[0m
+[0;31mE (189088) transport_base: Failed to open a new connection[0m
+[0;31mE (189098) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (189098) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT[0m
+Status: 0
+[0;32mI (197688) hx711: Medida: 0.037162 grms.[0m
+[0;32mI (197688) hx711: Caso 3[0m
+[0;32mI (209478) hx711: Medida: 0.060388 grms.[0m
+[0;32mI (209478) hx711: Caso 3[0m
+[0;32mI (212098) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;32mI (212098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (221268) hx711: Medida: 0.027872 grms.[0m
+[0;32mI (221268) hx711: Caso 3[0m
+[0;32mI (233068) hx711: Medida: -0.032517 grms.[0m
+[0;32mI (233068) hx711: Caso 3[0m
+[0;32mI (242098) ultrasonic:: Distancia: 17.0000 cm
+[0m
+[0;32mI (242098) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (243778) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (243778) Parse:: dosificar: true[0m
+[0;32mI (243778) Parse:: hora: 2025-03-02T16:43:35.282723[0m
+Status: 1
+[0;32mI (245128) hx711: Medida: -0.051098 grms.[0m
+[0;32mI (245128) hx711: Caso 3[0m
+[0;32mI (256918) hx711: Medida: 1.035895 grms.[0m
+[0;32mI (256918) hx711: Caso 3[0m
+[0;32mI (268708) hx711: Medida: 16.490704 grms.[0m

@@ -74,7 +74,7 @@ void obtener_confirmacion_dosificador(int *confirmacion)
     // wifi_disconnect();
 }
 
-void enviar_consumo_gato()
+void enviar_consumo_gato(int consumo)
 {
     chunk_payload_t chunk_payload = {0};
     esp_http_client_config_t esp_http_client_config = {
@@ -86,7 +86,7 @@ void enviar_consumo_gato()
         .cert_pem = (char *)cert};
     esp_http_client_handle_t client = esp_http_client_init(&esp_http_client_config);
     esp_http_client_set_header(client, "Content-Type", "application/json");
-    char *payload_body = crear_post_body();
+    char *payload_body = crear_post_body(consumo);
 
     esp_http_client_set_post_field(client, payload_body, strlen(payload_body));
 

@@ -4,6 +4,6 @@
 #include "esp_err.h"
 
 void obtener_confirmacion_dosificador(int *confirmacion);
-void enviar_consumo_gato();
+void enviar_consumo_gato(int consumo);
 
 #endif // CONSUMODATA_H

@@ -12,8 +12,8 @@ static const char *TAG = "motorDC";
 #define BLDC_MCPWM_TIMER_RESOLUTION_HZ 10000000 // 10MHz, 1 tick = 0.1us
 #define BLDC_MCPWM_PERIOD              500      // 50us, 20KHz
 
-#define MOTOR_IN1_GPIO GPIO_NUM_25
-#define MOTOR_IN2_GPIO GPIO_NUM_26
+#define MOTOR_IN1_GPIO GPIO_NUM_26
+#define MOTOR_IN2_GPIO GPIO_NUM_25
 #define MOTOR_EN_GPIO GPIO_NUM_27 // MCPWM pin
 
 static mcpwm_cmpr_handle_t  comparator = NULL;

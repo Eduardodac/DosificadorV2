@@ -19,7 +19,7 @@ void create_mutex_estadoDosificacion() {
 }
 
 //variables relacionadas a la lectura del sensor ultrasónico
-float ultrasonicoMedicion;
+int ultrasonicoMedicion = 0;
 SemaphoreHandle_t xMutexUltrasonicoMedicion = NULL;
 
 void create_mutex_ultrasonicoMedicion() {
@@ -32,7 +32,8 @@ void create_mutex_ultrasonicoMedicion() {
 }
 
 //variables relacionada a la lectura de la báscula
-float basculaMedicion;
+float basculaMedicion = 0;
+int basculaStatus = 0;
 SemaphoreHandle_t xMutexBasculaMedicion = NULL;
 
 void create_mutex_basculaMedicion() {

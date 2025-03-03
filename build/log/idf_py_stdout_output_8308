@@ -24,7 +24,7 @@
 -- Found Threads: TRUE  
 -- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 -- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
--- App "DosificadorV2" version: b7607c6-dirty
+-- App "DosificadorV2" version: 3187611-dirty
 -- Adding linker script C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/esp_system/ld/memory.ld
 -- Adding linker script C:/TrabajoTerminalII/DosificadorV2/build/esp-idf/esp_system/ld/sections.ld.in
 -- Adding linker script C:/Espressif/frameworks/esp-idf-v5.3/components/esp_rom/esp32/ld/esp32.rom.ld

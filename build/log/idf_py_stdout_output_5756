@@ -1,0 +1,455 @@
+J���� chip revi�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27b44h (162628) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037b6c vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ba38 vaddr=40080000 size=045e0h ( 17888) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a8018h (688152) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e8040 vaddr=400845e0 size=12c38h ( 76856) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (472) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     DosificadorV2[0m
+[0;32mI (481) app_init: App version:      3187611-dirty[0m
+[0;32mI (486) app_init: Compile time:     Mar  2 2025 15:42:38[0m
+[0;32mI (492) app_init: ELF file SHA256:  e87eccc49...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (556) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (563) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+I (608) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: 0caa81945
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: accept mbox: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (658) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5760[0m
+[0;32mI (668) wifi_init: tcp rx win: 5760[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (678) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (768) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (848) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (848) wifi:enable tsf
+[0;32mI (848) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (1108) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (1108) wifi:state: init -> auth (0xb0)
+I (1118) wifi:state: auth -> assoc (0x0)
+I (1128) wifi:state: assoc -> run (0x10)
+I (1148) wifi:connected with TT-535555, aid = 1, channel 1, BW20, bssid = 22:5b:ad:89:a9:dd
+I (1148) wifi:security: WPA2-PSK, phy: bgn, rssi: -49
+I (1148) wifi:pm start, type: 1
+
+I (1148) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1158) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1168) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (1218) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+[0;32mI (2168) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (2168) esp_netif_handlers: sta ip: 192.168.137.140, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2248) ultrasonic:: Distancia: 1218.0518 cm
+[0m
+[0;32mI (2248) ultrasonic:: Limite reestablecido
+[0m
+I (2258) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (4348) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (4348) Parse:: dosificar: false[0m
+[0;32mI (4348) Parse:: hora: 2025-03-02T15:54:20.5355708[0m
+[0;32mI (4358) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4358) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4458) hx711-example: Tarando...[0m
+[0;32mI (32318) ultrasonic:: Distancia: 1217.8103 cm
+[0m
+[0;32mI (32318) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (49468) hx711-example: Tareo listo... -250503[0m
+[0;33mW (49568) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (49568) SERVO: Connect timer and operator[0m
+[0;32mI (49568) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (49568) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49578) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (49588) SERVO: Enable and start timer[0m
+[0;32mI (49588) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49598) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49608) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49618) motorDC: Motor DC initialized[0m
+[0;32mI (51268) hx711-example: Info: -16[0m
+[0;32mI (51268) hx711-example: Medida: -0.074324 grms.[0m
+[0;32mI (62398) ultrasonic:: Distancia: 1218.2759 cm
+[0m
+[0;32mI (62398) ultrasonic:: Limite reestablecido
+[0m
+[0;31mE (63338) hx711-example: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)
+[0m
+[0;32mI (63358) hx711-example: Info: -3006245[0m
+[0;32mI (63358) hx711-example: Medida: -13964.815430 grms.[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014fd  PS      : 0x00060e30  A0      : 0x800d96c8  A1      : 0x3ffd0db0  
+A2      : 0x0000368c  A3      : 0x00003688  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffd0d80  
+A10     : 0x3ffd4eb8  A11     : 0x00001800  A12     : 0x00000011  A13     : 0x00060a23  
+A14     : 0x00ff0000  A15     : 0x00000028  SAR     : 0x0000001a  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0000368c  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400014fa:0x3ffd0db0 0x400d96c5:0x3ffd0dc0 0x400da5a6:0x3ffd0de0 0x400da5c0:0x3ffd0e00 0x400d92b4:0x3ffd0e20 0x400d7fc1:0x3ffd0e40 0x400d822f:0x3ffd0f00 0x40089ec1:0x3ffd0f40
+
+
+
+
+ELF file SHA256: e87eccc49
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27b44h (162628) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037b6c vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ba38 vaddr=40080000 size=045e0h ( 17888) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a8018h (688152) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e8040 vaddr=400845e0 size=12c38h ( 76856) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (472) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     DosificadorV2[0m
+[0;32mI (480) app_init: App version:      3187611-dirty[0m
+[0;32mI (486) app_init: Compile time:     Mar  2 2025 15:42:38[0m
+[0;32mI (492) app_init: ELF file SHA256:  e87eccc49...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (511) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (556) spi_flash: detected chip: generic[0m
+[0;32mI (559) spi_flash: flash io: dio[0m
+[0;33mW (563) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (577) main_task: Started on CPU0[0m
+[0;32mI (587) main_task: Calling app_main()[0m
+I (607) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (607) wifi:wifi firmware version: 0caa81945
+I (607) wifi:wifi certification version: v7.0
+I (607) wifi:config NVS flash: enabled
+I (607) wifi:config nano formating: disabled
+I (617) wifi:Init data frame dynamic rx buffer num: 32
+I (617) wifi:Init static rx mgmt buffer num: 5
+I (627) wifi:Init management short buffer num: 32
+I (627) wifi:Init dynamic tx buffer num: 32
+I (627) wifi:Init static rx buffer size: 1600
+I (637) wifi:Init static rx buffer num: 10
+I (637) wifi:Init dynamic rx buffer num: 32
+[0;32mI (647) wifi_init: rx ba win: 6[0m
+[0;32mI (647) wifi_init: accept mbox: 6[0m
+[0;32mI (647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (657) wifi_init: udp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (667) wifi_init: tcp rx win: 5760[0m
+[0;32mI (667) wifi_init: tcp mss: 1440[0m
+[0;32mI (677) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (677) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (687) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (767) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (797) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (797) wifi:enable tsf
+[0;32mI (797) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (1067) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (1067) wifi:state: init -> auth (0xb0)
+I (1067) wifi:state: auth -> assoc (0x0)
+I (1087) wifi:state: assoc -> run (0x10)
+I (1097) wifi:connected with TT-535555, aid = 1, channel 1, BW20, bssid = 22:5b:ad:89:a9:dd
+I (1097) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (1097) wifi:pm start, type: 1
+
+I (1107) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (1117) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (1157) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+I (1197) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2117) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (2117) esp_netif_handlers: sta ip: 192.168.137.140, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2197) ultrasonic:: Distancia: 1218.2587 cm
+[0m
+[0;32mI (2197) ultrasonic:: Limite reestablecido
+[0m
+I (2207) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (3987) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (3987) Parse:: dosificar: false[0m
+[0;32mI (3987) Parse:: hora: 2025-03-02T15:55:23.6959638[0m
+[0;32mI (3997) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3997) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4017) hx711-example: Tarando...[0m
+[0;32mI (32267) ultrasonic:: Distancia: 1217.9138 cm
+[0m
+[0;32mI (32267) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (49017) hx711-example: Tareo listo... -250513[0m
+[0;33mW (49117) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (49117) SERVO: Connect timer and operator[0m
+[0;32mI (49117) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (49117) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49127) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (49137) SERVO: Enable and start timer[0m
+[0;32mI (49137) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49147) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49157) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49167) motorDC: Motor DC initialized[0m
+[0;32mI (50827) hx711-example: Info: 2[0m
+[0;32mI (50827) hx711-example: Medida: 0.009291 grms.[0m
+[0;32mI (62337) ultrasonic:: Distancia: 1218.1896 cm
+[0m
+[0;32mI (62337) ultrasonic:: Limite reestablecido
+[0m
+[0;31mE (63277) hx711-example: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)
+[0m
+[0;32mI (63287) hx711-example: Info: -3757628[0m
+[0;32mI (63287) hx711-example: Medida: -17455.191406 grms.[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060230  A0      : 0x800d96c8  A1      : 0x3ffd0dc0  
+A2      : 0x0000442f  A3      : 0x0000442b  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x80091180  A9      : 0x3ffd0d90  
+A10     : 0x3ffd4eb0  A11     : 0x00001800  A12     : 0x00000011  A13     : 0x00060e23  
+A14     : 0x00ff0000  A15     : 0x00000028  SAR     : 0x0000001a  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0000442f  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400014d9:0x3ffd0dc0 0x400d96c5:0x3ffd0dd0 0x400da5a6:0x3ffd0df0 0x400da5c0:0x3ffd0e10 0x400d92b4:0x3ffd0e30 0x400d7fc1:0x3ffd0e50 0x400d822f:0x3ffd0f10 0x40089ec1:0x3ffd0f50
+
+
+
+
+ELF file SHA256: e87eccc49
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27b44h (162628) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037b6c vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ba38 vaddr=40080000 size=045e0h ( 17888) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a8018h (688152) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e8040 vaddr=400845e0 size=12c38h ( 76856) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (472) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     DosificadorV2[0m
+[0;32mI (480) app_init: App version:      3187611-dirty[0m
+[0;32mI (486) app_init: Compile time:     Mar  2 2025 15:42:38[0m
+[0;32mI (492) app_init: ELF file SHA256:  e87eccc49...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (511) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (556) spi_flash: detected chip: generic[0m
+[0;32mI (559) spi_flash: flash io: dio[0m
+[0;33mW (563) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (577) main_task: Started on CPU0[0m
+[0;32mI (587) main_task: Calling app_main()[0m
+I (607) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (607) wifi:wifi firmware version: 0caa81945
+I (607) wifi:wifi certification version: v7.0
+I (607) wifi:config NVS flash: enabled
+I (607) wifi:config nano formating: disabled
+I (617) wifi:Init data frame dynamic rx buffer num: 32
+I (617) wifi:Init static rx mgmt buffer num: 5
+I (627) wifi:Init management short buffer num: 32
+I (627) wifi:Init dynamic tx buffer num: 32
+I (627) wifi:Init static rx buffer size: 1600
+I (637) wifi:Init static rx buffer num: 10
+I (637) wifi:Init dynamic rx buffer num: 32
+[0;32mI (647) wifi_init: rx ba win: 6[0m
+[0;32mI (647) wifi_init: accept mbox: 6[0m
+[0;32mI (647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (657) wifi_init: udp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (667) wifi_init: tcp rx win: 5760[0m
+[0;32mI (667) wifi_init: tcp mss: 1440[0m
+[0;32mI (677) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (677) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (687) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (777) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (777) wifi:enable tsf
+[0;32mI (777) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (1037) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (1047) wifi:state: init -> auth (0xb0)
+I (1047) wifi:state: auth -> assoc (0x0)
+I (1047) wifi:state: assoc -> run (0x10)
+I (1067) wifi:connected with TT-535555, aid = 1, channel 1, BW20, bssid = 22:5b:ad:89:a9:dd
+I (1067) wifi:security: WPA2-PSK, phy: bgn, rssi: -48
+I (1067) wifi:pm start, type: 1
+
+I (1077) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (1077) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (1107) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1127) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+[0;32mI (2087) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (2087) esp_netif_handlers: sta ip: 192.168.137.140, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2167) ultrasonic:: Distancia: 1218.1207 cm
+[0m
+[0;32mI (2167) ultrasonic:: Limite reestablecido
+[0m
+I (2187) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (3987) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (3987) Parse:: dosificar: false[0m
+[0;32mI (3987) Parse:: hora: 2025-03-02T15:56:27.200834[0m
+[0;32mI (3997) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3997) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4017) hx711-example: Tarando...[0m
+[0;32mI (32237) ultrasonic:: Distancia: 1218.1379 cm
+[0m
+[0;32mI (32237) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (49007) hx711-example: Tareo listo... -250502[0m
+[0;33mW (49107) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (49107) SERVO: Connect timer and operator[0m
+[0;32mI (49107) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (49107) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49117) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (49127) SERVO: Enable and start timer[0m
+[0;32mI (49127) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49137) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49147) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (49157) motorDC: Motor DC initialized[0m
+[0;32mI (50807) hx711-example: Info: -2[0m
+[0;32mI (50807) hx711-example: Medida: -0.009291 grms.[0m
+[0;32mI (62307) ultrasonic:: Distancia: 1217.8621 cm
+[0m
+[0;32mI (62307) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (62597) hx711-example: Info: -6[0m
+[0;32mI (62597) hx711-example: Medida: -0.027872 grms.[0m
+[0;31mE (69087) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (69087) esp-tls: Failed to open new connection[0m
+[0;31mE (69087) transport_base: Failed to open a new connection[0m
+[0;31mE (69097) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (69097) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT[0m
+Status: 0
+[0;32mI (74387) hx711-example: Info: -6[0m
+[0;32mI (74387) hx711-example: Medida: -0.027872 grms.[0m
+[0;32mI (86187) hx711-example: Info: 7[0m
+[0;32mI (86187) hx711-example: Medida: 0.032517 grms.[0m
+[0;32mI (92377) ultrasonic:: Distancia: 1218.0690 cm
+[0m
+[0;32mI (92377) ultrasonic:: Limite reestablecido
+[0m
+[0;32mI (97977) hx711-example: Info: 12[0m
+[0;32mI (97977) hx711-example: Medida: 0.055743 grms.[0m
+[0;32mI (109767) hx711-example: Info: -8[0m
+[0;32mI (109767) hx711-example: Medida: -0.037162 grms.[0m

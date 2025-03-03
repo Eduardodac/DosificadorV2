@@ -10,10 +10,11 @@ extern const char *UUIDCollar;
 extern SemaphoreHandle_t xMutexEstadoDosificacion;
 extern int estadoDosificacion;
 
-extern float ultrasonicoMedicion;
+extern int ultrasonicoMedicion;
 extern SemaphoreHandle_t xMutexUltrasonicoMedicion;
 
 extern float basculaMedicion;
+extern int basculaStatus;
 extern SemaphoreHandle_t xMutexBasculaMedicion;
 
 void create_mutex_estadoDosificacion();
