@@ -43,6 +43,7 @@ void obtener_confirmacion_dosificador(int *confirmacion)
     chunk_payload_t chunk_payload = {0};
     esp_http_client_config_t esp_http_client_config = {
         .url = URL,
+        .timeout_ms = 10000,
         .method = HTTP_METHOD_GET,
         .event_handler = on_client_data,
         .user_data = &chunk_payload,
@@ -80,6 +81,7 @@ void enviar_consumo_gato(int consumo)
     esp_http_client_config_t esp_http_client_config = {
         // .url = "http://api.quotable.io/random",
         .url = "https://sistemamonitoreoalimentacionapi.azurewebsites.net/api/Registros",
+        .timeout_ms = 10000,
         .method = HTTP_METHOD_POST,
         .event_handler = on_client_data,
         .user_data = &chunk_payload,

@@ -66,13 +66,18 @@ esp_err_t confirmar_parse_dosificacion(char *confirmarDosificacionStr)
     return ESP_OK;
 }
 
-char *crear_post_body(int consumo)
+char *crear_post_body(float consumo)
 {
+
+    char consumoStr[20];
+
+    snprintf(consumoStr, sizeof(consumoStr), "%.6f", consumo);
+
     cJSON *json_payload = cJSON_CreateObject();
     cJSON_AddStringToObject(json_payload, "dosificadorId", UUIDDosificador);
     cJSON_AddStringToObject(json_payload, "collarId", UUIDCollar);
     cJSON_AddStringToObject(json_payload, "duracion", "10");
-    cJSON_AddStringToObject(json_payload, "consumo", consumo);
+    cJSON_AddStringToObject(json_payload, "consumo", consumoStr);
 
     char *payload_body = cJSON_Print(json_payload);
 
