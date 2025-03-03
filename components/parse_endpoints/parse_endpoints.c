@@ -77,7 +77,7 @@ char *crear_post_body(float consumo)
     cJSON_AddStringToObject(json_payload, "dosificadorId", UUIDDosificador);
     cJSON_AddStringToObject(json_payload, "collarId", UUIDCollar);
     cJSON_AddStringToObject(json_payload, "duracion", "10");
-    cJSON_AddStringToObject(json_payload, "consumo", consumoStr);
+    cJSON_AddNumberToObject(json_payload, "consumo", consumo);
 
     char *payload_body = cJSON_Print(json_payload);
 

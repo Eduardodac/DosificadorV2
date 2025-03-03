@@ -8,6 +8,10 @@
 
 static const char *TAGHX711 = "hx711";
 
+#define FACTOR_BASCULA 215.2728
+#define DIFERENCIA_MAXIMA 100
+#define DIFERENCIA_MINIMA -1000
+
 hx711_t hx711 = {
     .dout = 22,
     .pd_sck = 21,
@@ -48,64 +52,54 @@ void tarar_bascula()
     }
 }
 
-void medir_bascula(void *pvParameters)
-{
-    while(1)
-    {
-        int limiteMedicion = *(int *)pvParameters;
+void medir_bascula(void *pvParameters) {
+    int limiteMedicion = *(int *)pvParameters;
+
+    while (1) {
         float measure = 0;
 
-        esp_err_t err_tarado = hx711_wait(&hx711, 500);
-        if (err_tarado != ESP_OK)
-        {
-            ESP_LOGE(TAGHX711, "Dispositivo no encontrado: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
+        esp_err_t err = hx711_wait(&hx711, 500);
+        if (err != ESP_OK) {
+            ESP_LOGE(TAGHX711, "Dispositivo no encontrado: %d (%s)", err, esp_err_to_name(err));
+            vTaskDelay(pdMS_TO_TICKS(100)); // Pequeño retardo antes de reintentar
+            continue;
         }
-    
+
         int32_t data;
-        err_tarado = hx711_read_average(&hx711, 20, &data);
-        if (err_tarado != ESP_OK)
-        {
-            ESP_LOGE(TAGHX711, "No es posible la lectura: %d (%s)\n", err_tarado, esp_err_to_name(err_tarado));
+        err = hx711_read_average(&hx711, 20, &data);
+        if (err != ESP_OK) {
+            ESP_LOGE(TAGHX711, "No es posible la lectura: %d (%s)", err, esp_err_to_name(err));
+            vTaskDelay(pdMS_TO_TICKS(100)); // Pequeño retardo antes de reintentar
+            continue;
         }
-    
-        // ESP_LOGI(TAGHX711, "Raw data: %" PRIi32, data);
-        measure = (double)(data - DataSet) / 215.2728;
-        //ESP_LOGI(TAGHX711, "Info: %" PRIi32, (data - DataSet));
-        //ESP_LOGI(TAGHX711, "Medida: %f grms.", measure);
-        vTaskDelay(pdMS_TO_TICKS(100));
-    
-        if (xSemaphoreTake(xMutexBasculaMedicion, portMAX_DELAY) == pdTRUE)
-            {
-                if(basculaMedicion < limiteMedicion)
-                    basculaStatus = 1;
-                else{
-                    basculaStatus = 0;
-                }
-                xSemaphoreGive(xMutexBasculaMedicion);
+
+        measure = (float)(data - DataSet) / FACTOR_BASCULA;
+
+        if (xSemaphoreTake(xMutexBasculaMedicion, portMAX_DELAY) == pdTRUE) {
+            // Actualizar el estado de la báscula
+            basculaStatus = (basculaMedicion < limiteMedicion) ? 1 : 0;
+            float diferencia = basculaMedicion - measure;
+
+            if (diferencia <= DIFERENCIA_MINIMA || diferencia >= DIFERENCIA_MAXIMA) {
+                ESP_LOGI(TAGHX711, "Caso 1: Medida: %.2f grms. Medicion %.2f", measure, basculaMedicion);
+            } else if (measure == 0) {
+                ESP_LOGI(TAGHX711, "Caso 2: Medida: %.2f grms. Medicion %.2f", measure, basculaMedicion);
+            } else if (diferencia >= -1 && diferencia <= 1) {
+                ESP_LOGI(TAGHX711, "Caso 3: Medida: %.2f grms. Medicion %.2f", measure, basculaMedicion);
+                basculaMedicion = measure;
+            } else if (diferencia > 1) {
+                ESP_LOGI(TAGHX711, "Caso 4: Medida: %.2f grms. Medicion %.2f", measure, basculaMedicion);
+                ESP_LOGI(TAGHX711, "Diferencia: %f\n", diferencia);
+                enviar_consumo_gato(diferencia);
+                basculaMedicion = measure;
+            } else {
+                basculaMedicion = measure;
+                ESP_LOGI(TAGHX711, "Caso 5: Medida: %.2f grms. Medicion %.2f", measure, basculaMedicion);
             }
 
-        if (xSemaphoreTake(xMutexBasculaMedicion, portMAX_DELAY) == pdTRUE)
-            {
-                float diferencia = basculaMedicion - measure;
-                ESP_LOGI(TAGHX711, "Diferencia: %f grms.", diferencia);
-                if(diferencia <= -1000 || diferencia >= 100){
-                    ESP_LOGI(TAGHX711, "Caso 1: Medida: %f grms. Medicion %f", measure, basculaMedicion);
-                }
-                else if(measure == 0){
-                    ESP_LOGI(TAGHX711, "Caso 2: Medida: %f grms. Medicion %f", measure, basculaMedicion);
-                }
-                else if((diferencia <= 1) && (diferencia >= -1)){
-                    ESP_LOGI(TAGHX711, "Caso 3: Medida: %f grms. Medicion %f", measure, basculaMedicion);
-                    basculaMedicion = measure;
-                }else if(diferencia > 1){
-                    ESP_LOGI(TAGHX711, "Caso 4: Medida: %f grms. Medicion %f", measure, basculaMedicion);
-                    enviar_consumo_gato(diferencia);
-                }else{
-                    basculaMedicion = measure;
-                    ESP_LOGI(TAGHX711, "Caso 5: Medida: %f grms. Medicion %f", measure, basculaMedicion);
-                }
-                xSemaphoreGive(xMutexBasculaMedicion);
-            }
-        vTaskDelay(pdMS_TO_TICKS(10000));
+            xSemaphoreGive(xMutexBasculaMedicion);
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(5000)); // Reducir el retardo para mayor responsividad
     }
 }

@@ -75,7 +75,7 @@ void obtener_confirmacion_dosificador(int *confirmacion)
     // wifi_disconnect();
 }
 
-void enviar_consumo_gato(int consumo)
+void enviar_consumo_gato(float consumo)
 {
     chunk_payload_t chunk_payload = {0};
     esp_http_client_config_t esp_http_client_config = {
@@ -96,11 +96,11 @@ void enviar_consumo_gato(int consumo)
 
     if (err == ESP_OK)
     {
-        ESP_LOGI(TAGCONSUMO, "HTTP GET status = %dn", esp_http_client_get_status_code(client));
+    ESP_LOGI(TAGCONSUMO, "HTTP POST status = %d\n", esp_http_client_get_status_code(client));
     }
     else
     {
-        ESP_LOGE(TAGCONSUMO, "HTTP GET request failed: %s", esp_err_to_name(err));
+        ESP_LOGE(TAGCONSUMO, "HTTP Post request failed: %s", esp_err_to_name(err));
     }
     if (chunk_payload.buffer != NULL)
     {

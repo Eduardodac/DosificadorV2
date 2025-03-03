@@ -13,7 +13,7 @@
 #include "wifi_connect.h"
 #include "consumo_endpoints.h"
 
-static int limite_bascula=150;
+static int limite_bascula=20;
 
 int statusDosificacion = 0;
 
