@@ -1,0 +1,458 @@
+&�+
+B��J���� chip revisio�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27cf4h (163060) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037d1c vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003bbe8 vaddr=40080000 size=04430h ( 17456) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a8254h (688724) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e827c vaddr=40084430 size=12de8h ( 77288) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     DosificadorV2[0m
+[0;32mI (481) app_init: App version:      a9297aa-dirty[0m
+[0;32mI (487) app_init: Compile time:     Mar  3 2025 14:09:47[0m
+[0;32mI (493) app_init: ELF file SHA256:  22e2b341a...[0m
+[0;32mI (498) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+I (608) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: 0caa81945
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: accept mbox: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (658) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5760[0m
+[0;32mI (668) wifi_init: tcp rx win: 5760[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (678) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (768) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (848) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (848) wifi:enable tsf
+[0;32mI (848) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (2378) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (2378) wifi:state: init -> auth (0xb0)
+I (3378) wifi:state: auth -> init (0x200)
+I (3378) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+[0;33mW (3388) WIFI CONNECT: DISCONNECTED 2: WIFI_REASON_AUTH_EXPIRE[0m
+[0;33mW (10798) WIFI CONNECT: DISCONNECTED 205: WIFI_REASON_CONNECTION_FAIL[0m
+[0;32mI (10798) WIFI CONNECT: Reintentando conexión... Intento 1 de 5[0m
+I (15848) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (15848) wifi:state: init -> auth (0xb0)
+I (15848) wifi:state: auth -> assoc (0x0)
+I (15858) wifi:state: assoc -> run (0x10)
+I (15878) wifi:connected with TT-535555, aid = 1, channel 11, BW20, bssid = 22:5b:ad:89:a9:dd
+I (15878) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (15878) wifi:pm start, type: 1
+
+I (15878) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (15888) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (15938) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+I (15948) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (16898) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (16898) esp_netif_handlers: sta ip: 192.168.137.215, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (16898) ultrasonic:: Distancia: 17.0517 cm
+[0m
+I (16978) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (20878) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (20878) Parse:: dosificar: false[0m
+[0;32mI (20878) Parse:: hora: 2025-03-03T16:32:25.4200973[0m
+[0;32mI (20888) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (20888) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (20928) hx711: Tarando...[0m
+[0;32mI (46898) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;32mI (66018) hx711: Tareo listo... -252821[0m
+[0;33mW (66118) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (66118) SERVO: Connect timer and operator[0m
+[0;32mI (66118) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (66118) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (66128) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (66138) SERVO: Enable and start timer[0m
+[0;32mI (66138) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (66148) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (66158) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (66168) motorDC: Motor DC initialized[0m
+[0;32mI (67828) hx711: Caso 3: Medida: 0.07 grms. Medicion 0.00[0m
+[0;32mI (69988) hx711: Caso 3: Medida: 0.12 grms. Medicion 0.07[0m
+[0;32mI (72158) hx711: Caso 3: Medida: 0.13 grms. Medicion 0.12[0m
+[0;32mI (74318) hx711: Caso 3: Medida: 0.13 grms. Medicion 0.13[0m
+[0;32mI (76488) hx711: Caso 3: Medida: 0.06 grms. Medicion 0.13[0m
+[0;32mI (76898) ultrasonic:: Distancia: 17.0172 cm
+[0m
+[0;31mE (78238) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (79998) hx711: Caso 3: Medida: 0.08 grms. Medicion 0.06[0m
+[0;32mI (82168) hx711: Caso 3: Medida: 0.01 grms. Medicion 0.08[0m
+[0;32mI (84328) hx711: Caso 3: Medida: -0.04 grms. Medicion 0.01[0m
+[0;32mI (86498) hx711: Caso 3: Medida: -0.02 grms. Medicion -0.04[0m
+[0;33mW (88628) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;31mE (88628) Server Response: HTTP GET request failed: ESP_ERR_HTTP_EAGAIN. Intento 1 de 3[0m
+[0;32mI (88658) hx711: Caso 3: Medida: 0.00 grms. Medicion -0.02[0m
+[0;32mI (90828) hx711: Caso 3: Medida: 0.02 grms. Medicion 0.00[0m
+[0;32mI (92988) hx711: Caso 3: Medida: -0.03 grms. Medicion 0.02[0m
+[0;31mE (95958) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (96638) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (96638) Parse:: dosificar: false[0m
+[0;32mI (96638) Parse:: hora: 2025-03-03T16:33:41.2031621[0m
+Status: 0
+[0;32mI (97768) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.03[0m
+[0;32mI (99928) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.07[0m
+[0;32mI (102098) hx711: Caso 3: Medida: 0.04 grms. Medicion -0.04[0m
+[0;32mI (104258) hx711: Caso 3: Medida: 0.04 grms. Medicion 0.04[0m
+[0;32mI (106428) hx711: Caso 3: Medida: 0.07 grms. Medicion 0.04[0m
+[0;32mI (106898) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (108588) hx711: Caso 3: Medida: 0.06 grms. Medicion 0.07[0m
+[0;32mI (110758) hx711: Caso 3: Medida: 0.01 grms. Medicion 0.06[0m
+[0;32mI (112918) hx711: Caso 3: Medida: -0.00 grms. Medicion 0.01[0m
+[0;32mI (115088) hx711: Caso 3: Medida: 0.00 grms. Medicion -0.00[0m
+[0;32mI (117248) hx711: Caso 3: Medida: 0.05 grms. Medicion 0.00[0m
+[0;32mI (119418) hx711: Caso 3: Medida: 0.02 grms. Medicion 0.05[0m
+[0;32mI (121578) hx711: Caso 3: Medida: -0.01 grms. Medicion 0.02[0m
+[0;32mI (123748) hx711: Caso 3: Medida: 0.02 grms. Medicion -0.01[0m
+[0;32mI (125908) hx711: Caso 3: Medida: 0.03 grms. Medicion 0.02[0m
+[0;32mI (128078) hx711: Caso 3: Medida: 0.04 grms. Medicion 0.03[0m
+[0;32mI (130238) hx711: Caso 3: Medida: 0.06 grms. Medicion 0.04[0m
+[0;32mI (132398) hx711: Caso 3: Medida: 0.10 grms. Medicion 0.06[0m
+[0;32mI (134568) hx711: Caso 3: Medida: 0.07 grms. Medicion 0.10[0m
+[0;32mI (136728) hx711: Caso 3: Medida: 0.01 grms. Medicion 0.07[0m
+[0;32mI (136898) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;31mE (138238) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (140068) hx711: Caso 3: Medida: 0.05 grms. Medicion 0.01[0m
+[0;32mI (140778) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (140778) Parse:: dosificar: true[0m
+[0;32mI (140778) Parse:: hora: 2025-03-03T16:34:25.3267978[0m
+Status: 1
+[0;32mI (142228) hx711: Caso 3: Medida: 0.04 grms. Medicion 0.05[0m
+[0;32mI (144398) hx711: Caso 3: Medida: 0.48 grms. Medicion 0.04[0m
+[0;32mI (146558) hx711: Caso 5: Medida: 5.82 grms. Medicion 5.82[0m
+[0;32mI (148728) hx711: Caso 5: Medida: 7.09 grms. Medicion 7.09[0m
+[0;32mI (150888) hx711: Caso 3: Medida: 7.09 grms. Medicion 7.09[0m
+[0;32mI (153058) hx711: Caso 5: Medida: 9.37 grms. Medicion 9.37[0m
+[0;32mI (155218) hx711: Caso 5: Medida: 17.05 grms. Medicion 17.05[0m
+[0;32mI (157388) hx711: Caso 5: Medida: 18.35 grms. Medicion 18.35[0m
+[0;32mI (159548) hx711: Caso 3: Medida: 18.31 grms. Medicion 18.35[0m
+[0;32mI (161718) hx711: Caso 5: Medida: 21.24 grms. Medicion 21.24[0m
+[0;32mI (163878) hx711: Caso 5: Medida: 25.33 grms. Medicion 25.33[0m
+[0;32mI (166048) hx711: Caso 3: Medida: 25.65 grms. Medicion 25.33[0m
+[0;32mI (166898) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;32mI (168208) hx711: Caso 3: Medida: 25.63 grms. Medicion 25.65[0m
+[0;32mI (170378) hx711: Caso 5: Medida: 30.43 grms. Medicion 30.43[0m
+[0;32mI (172538) hx711: Caso 5: Medida: 36.01 grms. Medicion 36.01[0m
+[0;32mI (174698) hx711: Caso 3: Medida: 36.10 grms. Medicion 36.01[0m
+[0;32mI (176868) hx711: Caso 3: Medida: 36.31 grms. Medicion 36.10[0m
+[0;32mI (179028) hx711: Caso 5: Medida: 40.13 grms. Medicion 40.13[0m
+[0;32mI (181198) hx711: Caso 5: Medida: 41.63 grms. Medicion 41.63[0m
+[0;32mI (183358) hx711: Caso 3: Medida: 41.71 grms. Medicion 41.63[0m
+[0;32mI (185528) hx711: Caso 5: Medida: 43.09 grms. Medicion 43.09[0m
+[0;32mI (187688) hx711: Caso 5: Medida: 50.53 grms. Medicion 50.53[0m
+[0;32mI (189858) hx711: Caso 5: Medida: 53.30 grms. Medicion 53.30[0m
+[0;32mI (192018) hx711: Caso 3: Medida: 53.24 grms. Medicion 53.30[0m
+[0;32mI (194188) hx711: Caso 5: Medida: 55.12 grms. Medicion 55.12[0m
+[0;32mI (196348) hx711: Caso 5: Medida: 60.93 grms. Medicion 60.93[0m
+[0;32mI (196898) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;31mE (198248) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (198938) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (198938) Parse:: dosificar: false[0m
+[0;32mI (198938) Parse:: hora: 2025-03-03T16:35:23.3931049[0m
+Status: 1
+[0;32mI (200048) hx711: Caso 3: Medida: 61.22 grms. Medicion 60.93[0m
+[0;32mI (202208) hx711: Caso 3: Medida: 61.86 grms. Medicion 61.22[0m
+[0;32mI (204378) hx711: Caso 5: Medida: 66.48 grms. Medicion 66.48[0m
+[0;32mI (206538) hx711: Caso 3: Medida: 67.16 grms. Medicion 66.48[0m
+[0;32mI (208708) hx711: Caso 3: Medida: 67.19 grms. Medicion 67.16[0m
+[0;32mI (210868) hx711: Caso 5: Medida: 68.91 grms. Medicion 68.91[0m
+[0;32mI (213038) hx711: Caso 5: Medida: 71.27 grms. Medicion 71.27[0m
+[0;32mI (215198) hx711: Caso 3: Medida: 71.31 grms. Medicion 71.27[0m
+[0;32mI (217368) hx711: Caso 3: Medida: 71.29 grms. Medicion 71.31[0m
+[0;32mI (219528) hx711: Caso 5: Medida: 75.28 grms. Medicion 75.28[0m
+[0;32mI (221698) hx711: Caso 5: Medida: 78.87 grms. Medicion 78.87[0m
+[0;32mI (223858) hx711: Caso 3: Medida: 78.90 grms. Medicion 78.87[0m
+[0;32mI (226028) hx711: Caso 3: Medida: 79.03 grms. Medicion 78.90[0m
+[0;32mI (226898) ultrasonic:: Distancia: 17.0690 cm
+[0m
+[0;32mI (228188) hx711: Caso 5: Medida: 86.96 grms. Medicion 86.96[0m
+[0;32mI (230348) hx711: Caso 5: Medida: 88.52 grms. Medicion 88.52[0m
+[0;32mI (232518) hx711: Caso 3: Medida: 88.52 grms. Medicion 88.52[0m
+[0;32mI (234678) hx711: Caso 3: Medida: 89.06 grms. Medicion 88.52[0m
+[0;32mI (236848) hx711: Caso 5: Medida: 93.91 grms. Medicion 93.91[0m
+[0;32mI (239008) hx711: Caso 5: Medida: 95.52 grms. Medicion 95.52[0m
+[0;32mI (241178) hx711: Caso 5: Medida: 103.24 grms. Medicion 103.24[0m
+[0;32mI (243338) hx711: Caso 5: Medida: 106.46 grms. Medicion 106.46[0m
+[0;32mI (245508) hx711: Caso 5: Medida: 113.03 grms. Medicion 113.03[0m
+[0;32mI (247668) hx711: Caso 3: Medida: 113.79 grms. Medicion 113.03[0m
+[0;32mI (249828) hx711: Caso 3: Medida: 113.82 grms. Medicion 113.79[0m
+[0;32mI (251998) hx711: Caso 5: Medida: 116.95 grms. Medicion 116.95[0m
+[0;32mI (254158) hx711: Caso 5: Medida: 120.81 grms. Medicion 120.81[0m
+[0;32mI (256328) hx711: Caso 3: Medida: 121.46 grms. Medicion 120.81[0m
+[0;32mI (256898) ultrasonic:: Distancia: 17.0345 cm
+[0m
+[0;31mE (258258) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (258938) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (258938) Parse:: dosificar: false[0m
+[0;32mI (258938) Parse:: hora: 2025-03-03T16:36:23.5145942[0m
+Status: 1
+[0;32mI (260028) hx711: Caso 5: Medida: 122.96 grms. Medicion 122.96[0m
+[0;32mI (262188) hx711: Caso 5: Medida: 126.89 grms. Medicion 126.89[0m
+[0;32mI (264358) hx711: Caso 5: Medida: 129.84 grms. Medicion 129.84[0m
+[0;32mI (266518) hx711: Caso 5: Medida: 133.13 grms. Medicion 133.13[0m
+[0;32mI (268688) hx711: Caso 5: Medida: 137.87 grms. Medicion 137.87[0m
+[0;32mI (270848) hx711: Caso 5: Medida: 144.79 grms. Medicion 144.79[0m
+[0;32mI (273008) hx711: Caso 3: Medida: 145.18 grms. Medicion 144.79[0m
+[0;32mI (275178) hx711: Caso 3: Medida: 145.22 grms. Medicion 145.18[0m
+[0;32mI (277338) hx711: Caso 5: Medida: 148.57 grms. Medicion 148.57[0m
+[0;32mI (279508) hx711: Caso 5: Medida: 149.88 grms. Medicion 149.88[0m
+[0;32mI (281668) hx711: Caso 3: Medida: 149.92 grms. Medicion 149.88[0m
+[0;32mI (283838) hx711: Caso 3: Medida: 150.10 grms. Medicion 149.92[0m
+[0;32mI (285998) hx711: Caso 5: Medida: 152.41 grms. Medicion 152.41[0m
+[0;32mI (286898) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (288168) hx711: Caso 3: Medida: 152.77 grms. Medicion 152.41[0m
+[0;32mI (290328) hx711: Caso 5: Medida: 158.81 grms. Medicion 158.81[0m
+[0;32mI (292498) hx711: Caso 5: Medida: 160.52 grms. Medicion 160.52[0m
+[0;32mI (294658) hx711: Caso 3: Medida: 160.54 grms. Medicion 160.52[0m
+[0;32mI (296828) hx711: Caso 3: Medida: 160.53 grms. Medicion 160.54[0m
+[0;32mI (298988) hx711: Caso 3: Medida: 160.54 grms. Medicion 160.53[0m
+[0;32mI (301158) hx711: Caso 3: Medida: 160.55 grms. Medicion 160.54[0m
+[0;32mI (303318) hx711: Caso 3: Medida: 160.55 grms. Medicion 160.55[0m
+[0;32mI (305488) hx711: Caso 3: Medida: 160.56 grms. Medicion 160.55[0m
+[0;32mI (307648) hx711: Caso 3: Medida: 160.54 grms. Medicion 160.56[0m
+[0;32mI (309808) hx711: Caso 3: Medida: 160.54 grms. Medicion 160.54[0m
+[0;32mI (311978) hx711: Caso 3: Medida: 160.55 grms. Medicion 160.54[0m
+[0;32mI (314138) hx711: Caso 3: Medida: 160.56 grms. Medicion 160.55[0m
+[0;32mI (316308) hx711: Caso 3: Medida: 160.55 grms. Medicion 160.56[0m
+[0;32mI (316898) ultrasonic:: Distancia: 17.0690 cm
+[0m
+[0;31mE (318258) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (318848) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (318848) Parse:: dosificar: false[0m
+[0;32mI (318848) Parse:: hora: 2025-03-03T16:37:23.4092103[0m
+Status: 0
+[0;32mI (320098) hx711: Caso 3: Medida: 160.55 grms. Medicion 160.55[0m
+[0;32mI (322258) hx711: Caso 3: Medida: 160.57 grms. Medicion 160.55[0m
+[0;32mI (324428) hx711: Caso 3: Medida: 160.52 grms. Medicion 160.57[0m
+[0;32mI (326588) hx711: Caso 3: Medida: 160.54 grms. Medicion 160.52[0m
+[0;32mI (328758) hx711: Caso 3: Medida: 160.53 grms. Medicion 160.54[0m
+[0;32mI (330918) hx711: Caso 5: Medida: 172.27 grms. Medicion 172.27[0m
+[0;32mI (333078) hx711: Caso 4: Enviando consumo acumulado: 16.28 grms[0m
+body: {
+	"dosificadorId":	"02121b21-7f72-4054-9df1-c43777abcf49",
+	"collarId":	"D8C9D49C-5711-48C9-819D-698EB0A67815",
+	"duracion":	"10",
+	"consumo":	2.2420775429197073e-44
+}
+[0;32mI (335348) Server Response: HTTP POST status = 200
+[0m
+[0;32mI (337498) hx711: Caso 3: Medida: 155.96 grms. Medicion 155.99[0m
+[0;32mI (339668) hx711: Caso 3: Medida: 155.94 grms. Medicion 155.96[0m
+[0;32mI (341828) hx711: Caso 3: Medida: 155.91 grms. Medicion 155.94[0m
+[0;32mI (343998) hx711: Caso 5: Medida: 182.87 grms. Medicion 182.87[0m
+[0;32mI (346158) hx711: Caso 4: Enviando consumo acumulado: 30.58 grms[0m
+body: {
+	"dosificadorId":	"02121b21-7f72-4054-9df1-c43777abcf49",
+	"collarId":	"D8C9D49C-5711-48C9-819D-698EB0A67815",
+	"duracion":	"10",
+	"consumo":	4.2038953929744512e-44
+}
+[0;32mI (347608) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (348438) Server Response: HTTP POST status = 200
+[0m
+[0;32mI (350578) hx711: Caso 3: Medida: 152.28 grms. Medicion 152.30[0m
+[0;32mI (352748) hx711: Caso 3: Medida: 152.30 grms. Medicion 152.28[0m
+[0;32mI (354908) hx711: Caso 3: Medida: 152.26 grms. Medicion 152.30[0m
+[0;32mI (357078) hx711: Caso 3: Medida: 152.26 grms. Medicion 152.26[0m
+[0;32mI (359238) hx711: Caso 3: Medida: 152.31 grms. Medicion 152.26[0m
+[0;32mI (361408) hx711: Caso 3: Medida: 152.28 grms. Medicion 152.31[0m
+[0;32mI (363568) hx711: Caso 5: Medida: 177.22 grms. Medicion 177.22[0m
+[0;32mI (365728) hx711: Caso 4: Enviando consumo acumulado: 29.82 grms[0m
+body: {
+	"dosificadorId":	"02121b21-7f72-4054-9df1-c43777abcf49",
+	"collarId":	"D8C9D49C-5711-48C9-819D-698EB0A67815",
+	"duracion":	"10",
+	"consumo":	4.06376554654197e-44
+}
+[0;32mI (368098) Server Response: HTTP POST status = 200
+[0m
+[0;32mI (370238) hx711: Caso 3: Medida: 147.40 grms. Medicion 147.39[0m
+[0;32mI (372408) hx711: Caso 3: Medida: 147.40 grms. Medicion 147.40[0m
+[0;32mI (374568) hx711: Caso 3: Medida: 147.30 grms. Medicion 147.40[0m
+[0;32mI (376738) hx711: Caso 3: Medida: 147.35 grms. Medicion 147.30[0m
+[0;31mE (378388) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (378388) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (378958) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (378958) Parse:: dosificar: false[0m
+[0;32mI (378958) Parse:: hora: 2025-03-03T16:38:23.5187183[0m
+Status: 0
+[0;32mI (380168) hx711: Caso 5: Medida: 159.04 grms. Medicion 159.04[0m
+[0;32mI (382328) hx711: Caso 4: Enviando consumo acumulado: 15.71 grms[0m
+body: {
+	"dosificadorId":	"02121b21-7f72-4054-9df1-c43777abcf49",
+	"collarId":	"D8C9D49C-5711-48C9-819D-698EB0A67815",
+	"duracion":	"10",
+	"consumo":	2.1019476964872256e-44
+}
+[0;32mI (384588) Server Response: HTTP POST status = 200
+[0m
+[0;32mI (386748) hx711: Caso 3: Medida: 143.30 grms. Medicion 143.33[0m
+[0;32mI (388918) hx711: Caso 3: Medida: 143.29 grms. Medicion 143.30[0m
+[0;32mI (391078) hx711: Caso 3: Medida: 142.94 grms. Medicion 143.29[0m
+[0;32mI (393238) hx711: Caso 3: Medida: 142.91 grms. Medicion 142.94[0m
+[0;32mI (395408) hx711: Caso 3: Medida: 142.95 grms. Medicion 142.91[0m
+[0;32mI (397568) hx711: Caso 3: Medida: 142.89 grms. Medicion 142.95[0m
+[0;32mI (399738) hx711: Caso 3: Medida: 142.90 grms. Medicion 142.89[0m
+[0;32mI (401898) hx711: Caso 3: Medida: 142.99 grms. Medicion 142.90[0m
+[0;32mI (404068) hx711: Caso 3: Medida: 143.17 grms. Medicion 142.99[0m
+[0;32mI (406228) hx711: Caso 3: Medida: 143.26 grms. Medicion 143.17[0m
+[0;32mI (408388) ultrasonic:: Distancia: 20.2759 cm
+[0m
+[0;32mI (408388) hx711: Caso 3: Medida: 143.26 grms. Medicion 143.26[0m
+[0;32mI (410558) hx711: Caso 3: Medida: 143.33 grms. Medicion 143.26[0m
+[0;32mI (412728) hx711: Caso 3: Medida: 143.35 grms. Medicion 143.33[0m
+[0;32mI (414888) hx711: Caso 3: Medida: 143.43 grms. Medicion 143.35[0m
+[0;32mI (417058) hx711: Caso 3: Medida: 143.39 grms. Medicion 143.43[0m
+[0;32mI (419218) hx711: Caso 3: Medida: 143.31 grms. Medicion 143.39[0m
+[0;32mI (421388) hx711: Caso 3: Medida: 143.38 grms. Medicion 143.31[0m
+[0;32mI (423548) hx711: Caso 3: Medida: 143.34 grms. Medicion 143.38[0m
+[0;32mI (425708) hx711: Caso 3: Medida: 143.32 grms. Medicion 143.34[0m
+[0;32mI (427878) hx711: Caso 3: Medida: 143.26 grms. Medicion 143.32[0m
+[0;32mI (430038) hx711: Caso 3: Medida: 143.30 grms. Medicion 143.26[0m
+[0;32mI (432208) hx711: Caso 3: Medida: 143.29 grms. Medicion 143.30[0m
+[0;32mI (434368) hx711: Caso 3: Medida: 143.27 grms. Medicion 143.29[0m
+[0;32mI (436538) hx711: Caso 3: Medida: 143.29 grms. Medicion 143.27[0m
+[0;31mE (438368) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (438388) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (438958) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (438958) Parse:: dosificar: false[0m
+[0;32mI (438958) Parse:: hora: 2025-03-03T16:39:23.5286719[0m
+Status: 0
+[0;32mI (440148) hx711: Caso 3: Medida: 143.25 grms. Medicion 143.29[0m
+[0;32mI (442308) hx711: Caso 3: Medida: 143.28 grms. Medicion 143.25[0m
+[0;32mI (444468) hx711: Caso 3: Medida: 143.26 grms. Medicion 143.28[0m
+[0;32mI (446638) hx711: Caso 3: Medida: 143.28 grms. Medicion 143.26[0m
+[0;32mI (448798) hx711: Caso 3: Medida: 143.28 grms. Medicion 143.28[0m
+[0;32mI (450968) hx711: Caso 3: Medida: 143.22 grms. Medicion 143.28[0m
+[0;32mI (453128) hx711: Caso 3: Medida: 143.28 grms. Medicion 143.22[0m
+[0;32mI (455298) hx711: Caso 3: Medida: 143.27 grms. Medicion 143.28[0m
+[0;32mI (457458) hx711: Caso 3: Medida: 143.29 grms. Medicion 143.27[0m
+[0;32mI (459628) hx711: Caso 3: Medida: 143.30 grms. Medicion 143.29[0m
+[0;32mI (461788) hx711: Caso 3: Medida: 143.25 grms. Medicion 143.30[0m
+[0;32mI (463948) hx711: Caso 3: Medida: 143.26 grms. Medicion 143.25[0m
+[0;32mI (466118) hx711: Caso 3: Medida: 143.22 grms. Medicion 143.26[0m
+[0;32mI (468278) hx711: Caso 3: Medida: 143.25 grms. Medicion 143.22[0m
+[0;32mI (468388) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (470448) hx711: Caso 3: Medida: 143.20 grms. Medicion 143.25[0m
+[0;32mI (472608) hx711: Caso 3: Medida: 143.25 grms. Medicion 143.20[0m
+[0;32mI (474778) hx711: Caso 3: Medida: 143.23 grms. Medicion 143.25[0m
+[0;32mI (476938) hx711: Caso 3: Medida: 143.22 grms. Medicion 143.23[0m
+[0;32mI (479108) hx711: Caso 3: Medida: 143.29 grms. Medicion 143.22[0m
+[0;32mI (481268) hx711: Caso 3: Medida: 143.30 grms. Medicion 143.29[0m
+[0;32mI (483428) hx711: Caso 3: Medida: 143.30 grms. Medicion 143.30[0m
+[0;32mI (485598) hx711: Caso 3: Medida: 143.22 grms. Medicion 143.30[0m
+[0;32mI (487758) hx711: Caso 5: Medida: 152.63 grms. Medicion 152.63[0m
+[0;32mI (489928) hx711: Caso 5: Medida: 356.01 grms. Medicion 356.01[0m
+[0;32mI (492088) hx711: Caso 1: Medida: 251.20 grms. Medicion 356.01[0m
+[0;32mI (494258) hx711: Caso 1: Medida: 143.22 grms. Medicion 356.01[0m
+[0;32mI (496418) hx711: Caso 1: Medida: 143.25 grms. Medicion 356.01[0m
+[0;31mE (498378) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (498398) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (498958) Server Response: HTTP GET status = 200
+[0m
+[0;32mI (498968) Parse:: dosificar: false[0m
+[0;32mI (498968) Parse:: hora: 2025-03-03T16:40:23.533195[0m
+Status: 0
+[0;32mI (500208) hx711: Caso 1: Medida: 143.29 grms. Medicion 356.01[0m
+[0;32mI (502368) hx711: Caso 1: Medida: 143.23 grms. Medicion 356.01[0m
+[0;32mI (504538) hx711: Caso 1: Medida: 143.24 grms. Medicion 356.01[0m
+[0;32mI (506698) hx711: Caso 1: Medida: 143.18 grms. Medicion 356.01[0m
+[0;32mI (508868) hx711: Caso 1: Medida: 143.25 grms. Medicion 356.01[0m
+[0;32mI (511028) hx711: Caso 1: Medida: 143.26 grms. Medicion 356.01[0m
+[0;32mI (513198) hx711: Caso 1: Medida: 143.22 grms. Medicion 356.01[0m
+[0;32mI (515358) hx711: Caso 1: Medida: 143.23 grms. Medicion 356.01[0m
+[0;32mI (517528) hx711: Caso 1: Medida: 143.26 grms. Medicion 356.01[0m
+[0;32mI (519688) hx711: Caso 1: Medida: 143.23 grms. Medicion 356.01[0m
+[0;32mI (521858) hx711: Caso 1: Medida: 143.19 grms. Medicion 356.01[0m
+[0;32mI (524018) hx711: Caso 1: Medida: 143.26 grms. Medicion 356.01[0m
+[0;32mI (526178) hx711: Caso 1: Medida: 143.24 grms. Medicion 356.01[0m
+[0;32mI (528348) hx711: Caso 1: Medida: 143.21 grms. Medicion 356.01[0m
+[0;32mI (528408) ultrasonic:: Distancia: 17.0517 cm
+[0m
+[0;32mI (530508) hx711: Caso 1: Medida: 143.24 grms. Medicion 356.01[0m
+[0;32mI (532678) hx711: Caso 1: Medida: 143.20 grms. Medicion 356.01[0m
+[0;32mI (534838) hx711: Caso 1: Medida: 143.19 grms. Medicion 356.01[0m
+[0;32mI (537008) hx711: Caso 1: Medida: 143.19 grms. Medicion 356.01[0m
+[0;32mI (539168) hx711: Caso 1: Medida: 143.20 grms. Medicion 356.01[0m
+[0;32mI (541338) hx711: Caso 1: Medida: 143.22 grms. Medicion 356.01[0m
+[0;32mI (543498) hx711: Caso 1: Medida: 143.25 grms. Medicion 356.01[0m
+[0;32mI (545668) hx711: Caso 1: Medida: 143.23 grms. Medicion 356.01[0m
+[0;32mI (547828) hx711: Caso 1: Medida: 143.24 grms. Medicion 356.01[0m
+[0;32mI (549988) hx711: Caso 1: Medida: 143.28 grms. Medicion 356.01[0m
+[0;32mI (552158) hx711: Caso 1: Medida: 143.29 grms. Medicion 356.01[0m
+[0;32mI (554318) hx711: Caso 1: Medida: 143.29 grms. Medicion 356.01[0m

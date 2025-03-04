@@ -1,0 +1,790 @@
+ښ�j%�(35) boot: chip r�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  2 2025 15:43:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27dc4h (163268) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037dec vaddr=3ffb0000 size=03ec4h ( 16068) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003bcb8 vaddr=40080000 size=04360h ( 17248) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a82b8h (688824) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000e82e0 vaddr=40084360 size=12eb8h ( 77496) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     DosificadorV2[0m
+[0;32mI (481) app_init: App version:      a9297aa-dirty[0m
+[0;32mI (487) app_init: Compile time:     Mar  3 2025 14:09:47[0m
+[0;32mI (493) app_init: ELF file SHA256:  6791fb598...[0m
+[0;32mI (498) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (503) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8720 len 000278E0 (158 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097218 len 00008DE8 (35 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+I (608) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: 0caa81945
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: accept mbox: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (658) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5760[0m
+[0;32mI (668) wifi_init: tcp rx win: 5760[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (678) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (768) wifi:mode : sta (e0:5a:1b:77:7a:b0)
+I (778) wifi:enable tsf
+[0;32mI (778) WIFI CONNECT: WIFI_EVENT_STA_START[0m
+I (2288) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (2288) wifi:state: init -> auth (0xb0)
+I (2338) wifi:state: auth -> assoc (0x0)
+I (2338) wifi:state: assoc -> run (0x10)
+I (2358) wifi:connected with TT-535555, aid = 1, channel 11, BW20, bssid = 22:5b:ad:89:a9:dd
+I (2358) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (2358) wifi:pm start, type: 1
+
+I (2358) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (2368) WIFI CONNECT: WIFI_EVENT_STA_CONNECTED[0m
+I (2438) wifi:<ba-add>idx:0 (ifx:0, 22:5b:ad:89:a9:dd), tid:0, ssn:0, winSize:64
+I (2448) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3378) WIFI CONNECT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (3378) esp_netif_handlers: sta ip: 192.168.137.215, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (3378) ultrasonic:: Distancia: 18.0000 cm
+[0m
+I (3388) wifi:<ba-add>idx:1 (ifx:0, 22:5b:ad:89:a9:dd), tid:6, ssn:2, winSize:64
+[0;32mI (7478) Server Response: HTTP GET exitoso: 200[0m
+[0;32mI (7478) Parse:: dosificar: false[0m
+[0;32mI (7478) Parse:: hora: 2025-03-03T15:22:44.4599111[0m
+[0;31mE (7478) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+[0;32mI (7488) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7498) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7708) hx711: Tarando...[0m
+[0;32mI (33388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (52818) hx711: Tareo listo... -252627[0m
+[0;33mW (52918) mcpwm: adjust timer resolution to 1311475Hz[0m
+[0;32mI (52918) SERVO: Connect timer and operator[0m
+[0;32mI (52918) SERVO: Create comparator and generator from the operator[0m
+[0;32mI (52918) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (52928) SERVO: Set generator action on timer and compare event[0m
+[0;32mI (52938) SERVO: Enable and start timer[0m
+[0;32mI (52938) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (52948) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (52958) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (52968) motorDC: Motor DC initialized[0m
+[0;32mI (54618) hx711: Caso 3: Medida: 0.03 grms. Medicion 0.00[0m
+[0;32mI (56778) hx711: Caso 3: Medida: -0.02 grms. Medicion 0.03[0m
+[0;32mI (58948) hx711: Caso 3: Medida: -0.01 grms. Medicion -0.02[0m
+[0;32mI (61108) hx711: Caso 3: Medida: 0.02 grms. Medicion -0.01[0m
+[0;32mI (63278) hx711: Caso 3: Medida: 0.03 grms. Medicion 0.02[0m
+[0;32mI (63388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (65448) hx711: Caso 3: Medida: -0.01 grms. Medicion 0.03[0m
+[0;32mI (67608) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.01[0m
+[0;32mI (69778) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.03[0m
+[0;31mE (70388) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (70388) esp-tls: Failed to open new connection[0m
+[0;31mE (70388) transport_base: Failed to open a new connection[0m
+[0;31mE (70398) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (70398) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (71938) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.03[0m
+[0;32mI (74108) hx711: Caso 3: Medida: -0.01 grms. Medicion -0.04[0m
+[0;32mI (76268) hx711: Caso 2: Medida: 0.00 grms. Medicion -0.01[0m
+[0;32mI (78438) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.01[0m
+[0;31mE (81018) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (81698) Server Response: HTTP GET exitoso: 200[0m
+[0;32mI (81708) Parse:: dosificar: false[0m
+[0;32mI (81708) Parse:: hora: 2025-03-03T15:23:58.6066797[0m
+[0;31mE (81708) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (82768) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.04[0m
+[0;32mI (84928) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.04[0m
+[0;32mI (87098) hx711: Caso 3: Medida: -0.02 grms. Medicion -0.03[0m
+[0;32mI (89258) hx711: Caso 3: Medida: -0.00 grms. Medicion -0.02[0m
+[0;32mI (91418) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.00[0m
+[0;32mI (93388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (93588) hx711: Caso 3: Medida: -0.00 grms. Medicion -0.03[0m
+[0;32mI (95748) hx711: Caso 3: Medida: -0.00 grms. Medicion -0.00[0m
+[0;32mI (97918) hx711: Caso 3: Medida: -0.01 grms. Medicion -0.00[0m
+[0;32mI (100078) hx711: Caso 3: Medida: -0.01 grms. Medicion -0.01[0m
+[0;32mI (102248) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.01[0m
+[0;32mI (104408) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.07[0m
+[0;32mI (106578) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.03[0m
+[0;32mI (108738) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.04[0m
+[0;32mI (110908) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.03[0m
+[0;32mI (113068) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.08[0m
+[0;32mI (115238) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.05[0m
+[0;32mI (117398) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.07[0m
+[0;32mI (119568) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.05[0m
+[0;32mI (121728) hx711: Caso 3: Medida: -0.09 grms. Medicion -0.05[0m
+[0;32mI (123388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (123898) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.09[0m
+[0;32mI (126858) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (127068) Server Response: HTTP GET exitoso: 200[0m
+[0;32mI (127068) Parse:: dosificar: false[0m
+[0;32mI (127068) Parse:: hora: 2025-03-03T15:24:44.0667338[0m
+[0;31mE (127068) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (129038) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.07[0m
+[0;32mI (131198) hx711: Caso 3: Medida: 0.01 grms. Medicion -0.12[0m
+[0;32mI (133368) hx711: Caso 3: Medida: -0.08 grms. Medicion 0.01[0m
+[0;32mI (135528) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.08[0m
+[0;32mI (137698) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.04[0m
+[0;32mI (139858) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (142018) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.07[0m
+[0;32mI (144188) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.05[0m
+[0;32mI (146348) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.05[0m
+[0;32mI (148518) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.06[0m
+[0;32mI (150678) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (152848) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (153388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (155008) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (157178) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.07[0m
+[0;32mI (159338) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.06[0m
+[0;32mI (161508) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.06[0m
+[0;32mI (163668) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.07[0m
+[0;32mI (165838) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.04[0m
+[0;32mI (167998) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.08[0m
+[0;32mI (170168) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.05[0m
+[0;32mI (172328) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.03[0m
+[0;32mI (174488) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.10[0m
+[0;32mI (176658) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.11[0m
+[0;32mI (178818) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.10[0m
+[0;32mI (180988) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.04[0m
+[0;32mI (183148) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.08[0m
+[0;32mI (183388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (186038) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.10[0m
+[0;32mI (186868) Server Response: HTTP GET exitoso: 200[0m
+[0;32mI (186868) Parse:: dosificar: false[0m
+[0;32mI (186868) Parse:: hora: 2025-03-03T15:25:43.7861885[0m
+[0;31mE (186868) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (188198) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.11[0m
+[0;32mI (190368) hx711: Caso 3: Medida: -0.03 grms. Medicion -0.08[0m
+[0;32mI (192528) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.03[0m
+[0;32mI (194698) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.08[0m
+[0;32mI (196858) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.07[0m
+[0;32mI (199028) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.07[0m
+[0;32mI (201188) hx711: Caso 3: Medida: -0.04 grms. Medicion -0.10[0m
+[0;32mI (203358) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.04[0m
+[0;32mI (205518) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.08[0m
+[0;32mI (207688) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.11[0m
+[0;32mI (209848) hx711: Caso 3: Medida: -0.05 grms. Medicion -0.08[0m
+[0;32mI (212018) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.05[0m
+[0;32mI (213388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (214178) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.08[0m
+[0;32mI (216338) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.06[0m
+[0;32mI (218508) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.06[0m
+[0;32mI (220668) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.07[0m
+[0;32mI (222838) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.12[0m
+[0;32mI (224998) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.12[0m
+[0;32mI (227168) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.08[0m
+[0;32mI (229328) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.10[0m
+[0;32mI (231498) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.13[0m
+[0;32mI (233658) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.12[0m
+[0;32mI (235828) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.12[0m
+[0;32mI (237988) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.14[0m
+[0;32mI (240158) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.10[0m
+[0;32mI (242318) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.11[0m
+[0;32mI (243388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;31mE (244958) hx711: No es posible la lectura: 263 (ESP_ERR_TIMEOUT)[0m
+[0;32mI (245558) Server Response: HTTP GET exitoso: 200[0m
+[0;32mI (245558) Parse:: dosificar: false[0m
+[0;32mI (245558) Parse:: hora: 2025-03-03T15:26:42.5336757[0m
+[0;31mE (245558) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (246738) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.12[0m
+[0;32mI (248908) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.07[0m
+[0;32mI (251068) hx711: Caso 3: Medida: -0.09 grms. Medicion -0.10[0m
+[0;32mI (253238) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.09[0m
+[0;32mI (255398) hx711: Caso 3: Medida: -0.06 grms. Medicion -0.13[0m
+[0;32mI (257558) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.06[0m
+[0;32mI (259728) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.11[0m
+[0;32mI (261888) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.15[0m
+[0;32mI (264058) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.08[0m
+[0;32mI (266218) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.12[0m
+[0;32mI (268388) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.13[0m
+[0;32mI (270548) hx711: Caso 3: Medida: -0.09 grms. Medicion -0.11[0m
+[0;32mI (272718) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.09[0m
+[0;32mI (273388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (274878) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.10[0m
+[0;32mI (277048) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.11[0m
+[0;32mI (279208) hx711: Caso 3: Medida: -0.08 grms. Medicion -0.10[0m
+[0;32mI (281378) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.08[0m
+[0;32mI (283538) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.11[0m
+[0;32mI (285708) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.11[0m
+[0;32mI (287868) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.12[0m
+[0;32mI (290038) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.16[0m
+[0;32mI (292198) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.13[0m
+[0;32mI (294358) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.12[0m
+[0;32mI (296528) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.14[0m
+[0;32mI (298688) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.10[0m
+[0;32mI (300858) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.17[0m
+[0;32mI (303018) hx711: Caso 3: Medida: -0.11 grms. Medicion -0.12[0m
+[0;32mI (303388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (305188) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.11[0m
+[0;32mI (307348) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.12[0m
+[0;32mI (309518) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.10[0m
+[0;32mI (311678) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.15[0m
+[0;32mI (313848) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.20[0m
+[0;33mW (315038) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (315038) transport_base: Failed to open a new connection[0m
+[0;31mE (315038) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (315038) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (316008) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.13[0m
+[0;32mI (318178) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.17[0m
+[0;32mI (320338) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.15[0m
+[0;32mI (322508) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.14[0m
+[0;32mI (324668) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.18[0m
+[0;32mI (326828) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.13[0m
+[0;32mI (328998) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.16[0m
+[0;32mI (331158) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.12[0m
+[0;33mW (332548) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (332548) transport_base: Failed to open a new connection[0m
+[0;31mE (332548) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (332548) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (333328) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.12[0m
+[0;32mI (333388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (335488) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.16[0m
+[0;32mI (337658) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.16[0m
+[0;32mI (339818) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.17[0m
+[0;32mI (341988) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.18[0m
+[0;32mI (344148) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.16[0m
+[0;31mE (344558) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (344558) esp-tls: Failed to open new connection[0m
+[0;31mE (344558) transport_base: Failed to open a new connection[0m
+[0;31mE (344568) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (344568) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (344578) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (346308) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.10[0m
+[0;32mI (348478) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.15[0m
+[0;32mI (350638) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.15[0m
+[0;32mI (352808) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.18[0m
+[0;32mI (354968) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.14[0m
+[0;32mI (357138) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.16[0m
+[0;32mI (359298) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.13[0m
+[0;32mI (361468) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.20[0m
+[0;32mI (363388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (363628) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.13[0m
+[0;32mI (365798) hx711: Caso 3: Medida: -0.12 grms. Medicion -0.13[0m
+[0;32mI (367958) hx711: Caso 3: Medida: -0.07 grms. Medicion -0.12[0m
+[0;32mI (370128) hx711: Caso 3: Medida: -0.10 grms. Medicion -0.07[0m
+[0;32mI (372288) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.10[0m
+[0;33mW (373918) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (373918) transport_base: Failed to open a new connection[0m
+[0;31mE (373918) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (373918) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (374448) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.15[0m
+[0;32mI (376618) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.13[0m
+[0;32mI (378778) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.18[0m
+[0;32mI (380948) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.21[0m
+[0;32mI (383108) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.14[0m
+[0;32mI (385278) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.17[0m
+[0;32mI (387438) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.18[0m
+[0;32mI (389598) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.15[0m
+[0;32mI (391768) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.17[0m
+[0;33mW (392458) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (392458) transport_base: Failed to open a new connection[0m
+[0;31mE (392458) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (392458) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (393388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (393928) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.16[0m
+[0;32mI (396098) hx711: Caso 3: Medida: -0.09 grms. Medicion -0.13[0m
+[0;32mI (398258) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.09[0m
+[0;32mI (400428) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.14[0m
+[0;32mI (402588) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.14[0m
+[0;32mI (404758) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.14[0m
+[0;32mI (406918) hx711: Caso 3: Medida: -0.14 grms. Medicion -0.14[0m
+[0;32mI (409088) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.14[0m
+[0;32mI (411248) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.15[0m
+[0;33mW (411708) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (411708) transport_base: Failed to open a new connection[0m
+[0;31mE (411708) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (411708) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (411718) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (413418) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.18[0m
+[0;32mI (415578) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.13[0m
+[0;32mI (417748) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.20[0m
+[0;32mI (419908) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.16[0m
+[0;32mI (422078) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.20[0m
+[0;32mI (423388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (424238) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.18[0m
+[0;32mI (426408) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.20[0m
+[0;32mI (428568) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.19[0m
+[0;32mI (430728) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.20[0m
+[0;32mI (432898) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.24[0m
+[0;33mW (433938) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (433938) transport_base: Failed to open a new connection[0m
+[0;31mE (433938) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (433938) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (435058) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.17[0m
+[0;32mI (437228) hx711: Caso 3: Medida: -0.22 grms. Medicion -0.17[0m
+[0;32mI (439388) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.22[0m
+[0;32mI (441558) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.20[0m
+[0;32mI (443718) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.17[0m
+[0;32mI (445888) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.18[0m
+[0;32mI (448048) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.20[0m
+[0;32mI (450218) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.15[0m
+[0;32mI (452378) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.13[0m
+[0;33mW (452558) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (452558) transport_base: Failed to open a new connection[0m
+[0;31mE (452558) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (452558) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (453388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (454548) hx711: Caso 3: Medida: -0.16 grms. Medicion -0.16[0m
+[0;32mI (456708) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.16[0m
+[0;32mI (458878) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.15[0m
+[0;32mI (461038) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.24[0m
+[0;32mI (463208) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.20[0m
+[0;32mI (465368) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.19[0m
+[0;32mI (467538) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.20[0m
+[0;33mW (468158) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (468158) transport_base: Failed to open a new connection[0m
+[0;31mE (468158) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (468158) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (468168) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (469698) hx711: Caso 3: Medida: -0.13 grms. Medicion -0.15[0m
+[0;32mI (471868) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.13[0m
+[0;32mI (474028) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.21[0m
+[0;32mI (476188) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.21[0m
+[0;32mI (478358) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.25[0m
+[0;32mI (480518) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.24[0m
+[0;32mI (482688) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.17[0m
+[0;32mI (483388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (484848) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.18[0m
+[0;32mI (487018) hx711: Caso 3: Medida: -0.22 grms. Medicion -0.20[0m
+[0;32mI (489178) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.22[0m
+[0;32mI (491348) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.20[0m
+[0;32mI (493508) hx711: Caso 3: Medida: -0.15 grms. Medicion -0.21[0m
+[0;33mW (494958) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (494958) transport_base: Failed to open a new connection[0m
+[0;31mE (494958) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (494958) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (495678) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.15[0m
+[0;32mI (497838) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.20[0m
+[0;32mI (500008) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.21[0m
+[0;32mI (502168) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.23[0m
+[0;32mI (504338) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.19[0m
+[0;32mI (506498) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.19[0m
+[0;32mI (508658) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.20[0m
+[0;32mI (510828) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.20[0m
+[0;33mW (512158) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (512158) transport_base: Failed to open a new connection[0m
+[0;31mE (512158) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (512158) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (512988) hx711: Caso 3: Medida: -0.17 grms. Medicion -0.21[0m
+[0;32mI (513388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (515158) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.17[0m
+[0;32mI (517318) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.19[0m
+[0;32mI (519488) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.19[0m
+[0;32mI (521648) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.27[0m
+[0;32mI (523818) hx711: Caso 3: Medida: -0.19 grms. Medicion -0.23[0m
+[0;32mI (525978) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.19[0m
+[0;32mI (528138) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.26[0m
+[0;32mI (530308) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.23[0m
+[0;33mW (530698) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (530698) transport_base: Failed to open a new connection[0m
+[0;31mE (530698) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (530698) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (530708) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (532468) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.24[0m
+[0;32mI (534638) hx711: Caso 3: Medida: -0.20 grms. Medicion -0.21[0m
+[0;32mI (536798) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.20[0m
+[0;32mI (538968) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.25[0m
+[0;32mI (541128) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.24[0m
+[0;32mI (543298) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.24[0m
+[0;32mI (543388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (545458) hx711: Caso 3: Medida: -0.22 grms. Medicion -0.24[0m
+[0;32mI (547618) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.22[0m
+[0;32mI (549788) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.25[0m
+[0;32mI (551948) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.25[0m
+[0;33mW (553938) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (553938) transport_base: Failed to open a new connection[0m
+[0;31mE (553938) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (553938) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (554118) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.26[0m
+[0;32mI (556278) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.24[0m
+[0;32mI (558448) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.23[0m
+[0;32mI (560608) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.26[0m
+[0;32mI (562778) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.26[0m
+[0;32mI (564938) hx711: Caso 3: Medida: -0.18 grms. Medicion -0.24[0m
+[0;31mE (565948) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (565948) esp-tls: Failed to open new connection[0m
+[0;31mE (565948) transport_base: Failed to open a new connection[0m
+[0;31mE (565958) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (565958) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (567098) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.18[0m
+[0;32mI (569268) hx711: Caso 3: Medida: -0.22 grms. Medicion -0.21[0m
+[0;32mI (571428) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.22[0m
+[0;32mI (573388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (573598) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.24[0m
+[0;32mI (575758) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.29[0m
+[0;32mI (577928) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.23[0m
+[0;32mI (580088) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.27[0m
+[0;33mW (581178) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (581178) transport_base: Failed to open a new connection[0m
+[0;31mE (581178) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (581178) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (581188) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (582258) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.23[0m
+[0;32mI (584418) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.26[0m
+[0;32mI (586588) hx711: Caso 3: Medida: -0.24 grms. Medicion -0.27[0m
+[0;32mI (588748) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.24[0m
+[0;32mI (590908) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.23[0m
+[0;32mI (593078) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.25[0m
+[0;32mI (595238) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.27[0m
+[0;32mI (597408) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.25[0m
+[0;32mI (599568) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.29[0m
+[0;32mI (601738) hx711: Caso 3: Medida: -0.21 grms. Medicion -0.29[0m
+[0;32mI (603388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (603898) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.21[0m
+[0;32mI (606068) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.26[0m
+[0;32mI (608228) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.28[0m
+[0;31mE (610378) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (610378) esp-tls: Failed to open new connection[0m
+[0;31mE (610378) transport_base: Failed to open a new connection[0m
+[0;31mE (610388) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (610388) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (610398) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.29[0m
+[0;32mI (612558) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.26[0m
+[0;32mI (614718) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.26[0m
+[0;32mI (616888) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.25[0m
+[0;32mI (619048) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.23[0m
+[0;32mI (621218) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.28[0m
+[0;32mI (623378) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.30[0m
+[0;32mI (625548) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.29[0m
+[0;33mW (626948) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (626948) transport_base: Failed to open a new connection[0m
+[0;31mE (626948) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (626948) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (627708) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.29[0m
+[0;32mI (629878) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.28[0m
+[0;32mI (632038) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.25[0m
+[0;31mE (632608) esp-tls-mbedtls: mbedtls_ssl_setup returned -0x7F00[0m
+[0;31mE (632608) esp-tls: create_ssl_handle failed[0m
+[0;31mE (632608) esp-tls: Failed to open new connection[0m
+[0;31mE (632618) transport_base: Failed to open a new connection[0m
+[0;31mE (632628) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (632628) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (632638) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (633388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (634208) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.28[0m
+[0;32mI (636368) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.26[0m
+[0;32mI (638528) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.23[0m
+[0;32mI (640698) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.26[0m
+[0;32mI (642858) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.27[0m
+[0;32mI (645028) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.33[0m
+[0;32mI (647188) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.32[0m
+[0;32mI (649358) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.27[0m
+[0;32mI (651518) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.34[0m
+[0;32mI (653688) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.29[0m
+[0;32mI (655848) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.25[0m
+[0;32mI (658008) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.33[0m
+[0;32mI (660178) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.30[0m
+[0;32mI (662338) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.30[0m
+[0;32mI (663388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (664508) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.31[0m
+[0;32mI (666668) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.34[0m
+[0;32mI (668838) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.28[0m
+[0;32mI (670998) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.28[0m
+[0;32mI (673168) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.28[0m
+[0;32mI (675328) hx711: Caso 3: Medida: -0.23 grms. Medicion -0.27[0m
+[0;33mW (677018) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (677018) transport_base: Failed to open a new connection[0m
+[0;31mE (677018) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (677018) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (677498) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.23[0m
+[0;32mI (679658) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.27[0m
+[0;32mI (681818) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.27[0m
+[0;32mI (683988) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.28[0m
+[0;32mI (686148) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.25[0m
+[0;32mI (688318) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.27[0m
+[0;31mE (689028) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (689028) esp-tls: Failed to open new connection[0m
+[0;31mE (689028) transport_base: Failed to open a new connection[0m
+[0;31mE (689038) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (689038) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (690478) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.29[0m
+[0;32mI (692648) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.29[0m
+[0;32mI (693388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (694808) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.34[0m
+[0;32mI (696978) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.34[0m
+[0;32mI (699138) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.33[0m
+[0;32mI (701308) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.35[0m
+[0;32mI (703468) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.32[0m
+[0;32mI (705638) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.28[0m
+[0;33mW (707738) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (707738) transport_base: Failed to open a new connection[0m
+[0;31mE (707738) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (707738) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (707748) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (707798) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.35[0m
+[0;32mI (709968) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.31[0m
+[0;32mI (712128) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.33[0m
+[0;32mI (714288) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.33[0m
+[0;32mI (716458) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.33[0m
+[0;32mI (718618) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.26[0m
+[0;32mI (720788) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.32[0m
+[0;32mI (722948) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.31[0m
+[0;32mI (723388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (725118) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.28[0m
+[0;32mI (727278) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.26[0m
+[0;32mI (729448) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.31[0m
+[0;32mI (731608) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.32[0m
+[0;32mI (733778) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.31[0m
+[0;32mI (735938) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.27[0m
+[0;32mI (738108) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.29[0m
+[0;33mW (738258) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (738258) transport_base: Failed to open a new connection[0m
+[0;31mE (738258) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (738258) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (740268) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.29[0m
+[0;32mI (742428) hx711: Caso 3: Medida: -0.29 grms. Medicion -0.31[0m
+[0;32mI (744598) hx711: Caso 3: Medida: -0.28 grms. Medicion -0.29[0m
+[0;32mI (746758) hx711: Caso 3: Medida: -0.25 grms. Medicion -0.28[0m
+[0;32mI (748928) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.25[0m
+[0;32mI (751088) hx711: Caso 3: Medida: -0.31 grms. Medicion -0.33[0m
+[0;32mI (753258) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.31[0m
+[0;32mI (753388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (755418) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.36[0m
+[0;33mW (757508) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (757508) transport_base: Failed to open a new connection[0m
+[0;31mE (757508) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (757508) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (757588) hx711: Caso 3: Medida: -0.26 grms. Medicion -0.36[0m
+[0;32mI (759748) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.26[0m
+[0;32mI (761918) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.30[0m
+[0;32mI (764078) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.35[0m
+[0;32mI (766248) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.30[0m
+[0;32mI (768408) hx711: Caso 3: Medida: -0.27 grms. Medicion -0.34[0m
+[0;32mI (770578) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.27[0m
+[0;32mI (772738) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.34[0m
+[0;33mW (774808) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (774808) transport_base: Failed to open a new connection[0m
+[0;31mE (774808) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (774808) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (774818) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (774908) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.39[0m
+[0;32mI (777068) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.34[0m
+[0;32mI (779228) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.33[0m
+[0;32mI (781398) hx711: Caso 3: Medida: -0.37 grms. Medicion -0.39[0m
+[0;32mI (783388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;32mI (783558) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.37[0m
+[0;32mI (785728) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.34[0m
+[0;32mI (787888) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.32[0m
+[0;32mI (790058) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.34[0m
+[0;31mE (790378) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (790378) esp-tls: Failed to open new connection[0m
+[0;31mE (790378) transport_base: Failed to open a new connection[0m
+[0;31mE (790388) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (790388) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (792218) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.32[0m
+[0;32mI (794388) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.36[0m
+[0;32mI (796548) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.40[0m
+[0;32mI (798708) hx711: Caso 3: Medida: -0.32 grms. Medicion -0.39[0m
+[0;32mI (800878) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.32[0m
+[0;32mI (803038) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.35[0m
+[0;32mI (805208) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.33[0m
+[0;33mW (805848) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (805848) transport_base: Failed to open a new connection[0m
+[0;31mE (805848) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (805848) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (807368) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.39[0m
+[0;32mI (809538) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.38[0m
+[0;32mI (811698) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.34[0m
+[0;32mI (813388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (813868) hx711: Caso 3: Medida: -0.37 grms. Medicion -0.41[0m
+[0;32mI (816028) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.37[0m
+[0;32mI (818198) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.35[0m
+[0;32mI (820358) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.39[0m
+[0;32mI (822528) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.36[0m
+[0;33mW (822668) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (822668) transport_base: Failed to open a new connection[0m
+[0;31mE (822668) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (822668) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (822678) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (824688) hx711: Caso 3: Medida: -0.30 grms. Medicion -0.36[0m
+[0;32mI (826848) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.30[0m
+[0;32mI (829018) hx711: Caso 3: Medida: -0.37 grms. Medicion -0.35[0m
+[0;32mI (831178) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.37[0m
+[0;32mI (833348) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.33[0m
+[0;32mI (835508) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.33[0m
+[0;32mI (837678) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.40[0m
+[0;32mI (839838) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.34[0m
+[0;32mI (842008) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.35[0m
+[0;32mI (843388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (844168) hx711: Caso 3: Medida: -0.43 grms. Medicion -0.39[0m
+[0;32mI (846338) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.43[0m
+[0;32mI (848498) hx711: Caso 3: Medida: -0.35 grms. Medicion -0.36[0m
+[0;32mI (850658) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.35[0m
+[0;32mI (852828) hx711: Caso 3: Medida: -0.42 grms. Medicion -0.33[0m
+[0;33mW (854888) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (854888) transport_base: Failed to open a new connection[0m
+[0;31mE (854888) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (854888) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (854988) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.42[0m
+[0;32mI (857158) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.38[0m
+[0;32mI (859318) hx711: Caso 3: Medida: -0.33 grms. Medicion -0.33[0m
+[0;32mI (861488) hx711: Caso 3: Medida: -0.37 grms. Medicion -0.33[0m
+[0;32mI (863648) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.37[0m
+[0;32mI (865818) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.39[0m
+[0;32mI (867978) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.39[0m
+[0;32mI (870138) hx711: Caso 3: Medida: -0.36 grms. Medicion -0.38[0m
+[0;32mI (872308) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.36[0m
+[0;32mI (873388) ultrasonic:: Distancia: 18.0345 cm
+[0m
+[0;33mW (874138) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (874138) transport_base: Failed to open a new connection[0m
+[0;31mE (874138) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (874138) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (874468) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.40[0m
+[0;32mI (876638) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.39[0m
+[0;32mI (878798) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.39[0m
+[0;32mI (880968) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.38[0m
+[0;32mI (883128) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.40[0m
+[0;32mI (885298) hx711: Caso 3: Medida: -0.37 grms. Medicion -0.38[0m
+[0;32mI (887458) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.37[0m
+[0;32mI (889628) hx711: Caso 3: Medida: -0.44 grms. Medicion -0.34[0m
+[0;32mI (891788) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.44[0m
+[0;33mW (893388) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (893388) transport_base: Failed to open a new connection[0m
+[0;31mE (893388) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (893388) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (893398) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (893958) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.38[0m
+[0;32mI (896118) hx711: Caso 3: Medida: -0.46 grms. Medicion -0.39[0m
+[0;32mI (898278) hx711: Caso 3: Medida: -0.43 grms. Medicion -0.46[0m
+[0;32mI (900448) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.43[0m
+[0;32mI (902608) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.41[0m
+[0;32mI (903388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (904778) hx711: Caso 3: Medida: -0.34 grms. Medicion -0.40[0m
+[0;32mI (906938) hx711: Caso 3: Medida: -0.44 grms. Medicion -0.34[0m
+[0;32mI (909108) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.44[0m
+[0;32mI (911268) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.41[0m
+[0;32mI (913438) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.40[0m
+[0;33mW (914588) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (914588) transport_base: Failed to open a new connection[0m
+[0;31mE (914588) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (914588) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 1 de 3[0m
+[0;32mI (915598) hx711: Caso 3: Medida: -0.42 grms. Medicion -0.40[0m
+[0;32mI (917768) hx711: Caso 3: Medida: -0.45 grms. Medicion -0.42[0m
+[0;32mI (919928) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.45[0m
+[0;32mI (922098) hx711: Caso 3: Medida: -0.44 grms. Medicion -0.38[0m
+[0;32mI (924258) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.44[0m
+[0;32mI (926418) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.41[0m
+[0;31mE (926598) esp-tls: couldn't get hostname for :sistemamonitoreoalimentacionapi.azurewebsites.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (926598) esp-tls: Failed to open new connection[0m
+[0;31mE (926598) transport_base: Failed to open a new connection[0m
+[0;31mE (926608) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (926618) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 2 de 3[0m
+[0;32mI (928588) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.39[0m
+[0;32mI (930748) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.39[0m
+[0;32mI (932918) hx711: Caso 3: Medida: -0.38 grms. Medicion -0.38[0m
+[0;32mI (933388) ultrasonic:: Distancia: 18.0000 cm
+[0m
+[0;32mI (935078) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.38[0m
+[0;32mI (937248) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.39[0m
+[0;32mI (939408) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.41[0m
+[0;32mI (941578) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.41[0m
+[0;33mW (942128) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (942128) transport_base: Failed to open a new connection[0m
+[0;31mE (942128) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (942128) Server Response: HTTP GET request failed: ESP_ERR_HTTP_CONNECT. Intento 3 de 3[0m
+[0;31mE (942138) Server Response: No se pudo obtener la confirmación después de 3 intentos[0m
+Status: 0
+[0;32mI (943738) hx711: Caso 3: Medida: -0.40 grms. Medicion -0.40[0m
+[0;32mI (945908) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.40[0m
+[0;32mI (948068) hx711: Caso 3: Medida: -0.43 grms. Medicion -0.39[0m
+[0;32mI (950238) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.43[0m
+[0;32mI (952398) hx711: Caso 3: Medida: -0.42 grms. Medicion -0.41[0m
+[0;32mI (954568) hx711: Caso 3: Medida: -0.46 grms. Medicion -0.42[0m
+[0;32mI (956728) hx711: Caso 3: Medida: -0.41 grms. Medicion -0.46[0m
+[0;32mI (958898) hx711: Caso 3: Medida: -0.43 grms. Medicion -0.41[0m
+[0;32mI (961058) hx711: Caso 3: Medida: -0.45 grms. Medicion -0.43[0m
+[0;32mI (963218) hx711: Caso 3: Medida: -0.39 grms. Medicion -0.45[0m
+[0;32mI (963388) ultrasonic:: Distancia: 18.0172 cm
+[0m
+[0;32mI (965388) hx711: Caso 3: Medida: -0.42 grms. Medicion -0.39[0m
+[0;32mI (967548) hx711: Caso 3: Medida: -0.43 grms. Medicion -0.42[0m

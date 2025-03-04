@@ -1,0 +1,19 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d945d: crear_post_body at C:/TrabajoTerminalII/DosificadorV2/components/parse_endpoints/parse_endpoints.c:75
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d945a: crear_post_body at C:/TrabajoTerminalII/DosificadorV2/components/parse_endpoints/parse_endpoints.c:74
+0x400d8050: enviar_consumo_gato at C:/TrabajoTerminalII/DosificadorV2/components/consumo_endpoints/consumo_endpoints.c:105
+0x400d8392: medir_bascula at C:/TrabajoTerminalII/DosificadorV2/components/hx711_comp/hx711_comp.c:98
+0x40089ec1: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

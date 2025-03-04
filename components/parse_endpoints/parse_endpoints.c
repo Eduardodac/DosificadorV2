@@ -68,11 +68,6 @@ esp_err_t confirmar_parse_dosificacion(char *confirmarDosificacionStr)
 
 char *crear_post_body(float consumo)
 {
-
-    char consumoStr[20];
-
-    snprintf(consumoStr, sizeof(consumoStr), "%.6f", consumo);
-
     cJSON *json_payload = cJSON_CreateObject();
     cJSON_AddStringToObject(json_payload, "dosificadorId", UUIDDosificador);
     cJSON_AddStringToObject(json_payload, "collarId", UUIDCollar);
@@ -81,7 +76,7 @@ char *crear_post_body(float consumo)
 
     char *payload_body = cJSON_Print(json_payload);
 
-    printf("body: %s\n", payload_body);
+    ESP_LOGI(TAGPARSE, "Cuerpo de la solicitud: %s", payload_body);
     cJSON_Delete(json_payload);
     return payload_body;
 }
